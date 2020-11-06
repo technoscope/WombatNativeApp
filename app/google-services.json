@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "148066403557",
+    "firebase_url": "https://wombatapp.firebaseio.com",
+    "project_id": "wombatapp",
+    "storage_bucket": "wombatapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148066403557:android:e58ad0c82afc05e927400c",
+        "android_client_info": {
+          "package_name": "com.example.wombatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148066403557-ahuu2mvs4tpb65t7plpnu9ulq484ftap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wombatapp",
+            "certificate_hash": "ab3953b904910b7947d956b117bcb53edc4ca9b5"
+          }
+        },
+        {
+          "client_id": "148066403557-ddapkf003s8vk7ptuitnu7vualccj68n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADUdw5MI_MYfoe3x7KW0zdn5jETgZOYwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148066403557-ddapkf003s8vk7ptuitnu7vualccj68n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

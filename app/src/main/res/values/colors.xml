@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EC737A</color>
+    <color name="colorAccent">#F5AD91</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="lightpink">#FDF1F2</color>
+    <color name="widgetTextColor">#555</color>
+</resources>

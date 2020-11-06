@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">désactivé</string>
+    <string name="info_is_not_available">non disponible</string>
+    <string name="info_bluetooth_try_connection">Tentative de connexion à :</string>
+    <string name="info_bluetooth_connection_lost">La connexion Bluetooth a été perdue</string>
+    <string name="info_bluetooth_no_device">Aucun appareil Bluetooth détecté</string>
+    <string name="info_bluetooth_connection_successful">Connecté</string>
+    <string name="info_bluetooth_init">Initialisation du périphérique Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Erreur Bluetooth</string>
+    <string name="label_bt_device_no_support">Appareil non pris en charge</string>
+    <string name="permission_not_granted">Permission non accordée</string>
+    <string name="permission_bluetooth_info_title">Info</string>
+    <string name="label_bluetooth_searching">Détection de votre pèse-personne Bluetooth en cours</string>
+    <string name="label_bluetooth_searching_finished">Détection finalisé</string>
+    <string name="permission_bluetooth_info">La permission d\'accès à la location sont nécessaires pour chercher des dispositifs Bluetooth. Cette permissions peut être révoqué par la suite.</string>
+    <string name="label_scale_not_supported">Votre pèse personne n\'est pas parmi les dispositif reconnus ?</string>
+    <string name="label_click_to_help_add_support">Cliquer ici pour contribuer</string>
+    <string name="info_bluetooth_no_device_retrying">Impossible d\'établir une connexion, réessayez…</string>
+    <string name="info_bluetooth_connection_disconnected">Connexion Bluetooth fermée</string>
+    <string name="permission_location_service_info">Autoriser l\'accès à la location pour chercher des dispositifs Bluetooth. Cette permissions peut être révoqué par la suite.</string>
+    <string name="label_upgrade_to_openScale_pro">Veuillez mettre à niveau vers openScale pro pour la prise en charge du Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Impossible de se connecter à la balance, assurez-vous qu\'elle soit allumée.</string>
+</resources>

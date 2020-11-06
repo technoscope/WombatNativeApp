@@ -1,0 +1,3 @@
+include ':anychart'
+rootProject.name='Diet App'
+include ':app', ':blessed'

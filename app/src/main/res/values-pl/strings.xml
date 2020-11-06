@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">wyłączono</string>
+    <string name="info_is_not_available">niedostępne</string>
+    <string name="info_bluetooth_try_connection">Łączenie z:</string>
+    <string name="info_bluetooth_connection_lost">Utracono połączenie Bluetooth</string>
+    <string name="info_bluetooth_no_device">Nie znaleziono urządzeń Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">Nawiązano połączenie</string>
+    <string name="info_bluetooth_init">Inicjalizacja urządzeń Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Nieznany błąd Bluetooth</string>
+    <string name="label_bluetooth_searching">Wyszukuję wagę Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Wyszukiwanie zakończone</string>
+    <string name="label_bt_device_no_support">urządzenie nie jest wspierane</string>
+    <string name="permission_not_granted">Nie przyznano uprawnień</string>
+    <string name="permission_bluetooth_info">Wymagane zezwolenie na dostęp do lokalizacji w celu znalezienia urządzeń Bluetooth. Po znalezieniu urządzenia zezwolenie można wycofać.</string>
+    <string name="permission_bluetooth_info_title">Informacje</string>
+    <string name="label_scale_not_supported">Czy twoja waga nie jest obsługiwana?</string>
+    <string name="label_click_to_help_add_support">Kliknij tutaj, aby pomóc dodać obsługę</string>
+    <string name="info_bluetooth_no_device_retrying">Nie można nawiązać połączenia, ponawianie…</string>
+    <string name="info_bluetooth_connection_disconnected">Zakończono połączenie bluetooth</string>
+    <string name="permission_location_service_info">Zezwól na dostęp do lokalizacji w ustawieniach Androida, aby wyszukać urządzenia Bluetooth. Możesz je potem wyłączyć.</string>
+    <string name="label_upgrade_to_openScale_pro">Zaktualizuj system do openScale pro w celu obsługi Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Nie można połączyć się z wagą, upewnij się, że jest włączona.</string>
+</resources>

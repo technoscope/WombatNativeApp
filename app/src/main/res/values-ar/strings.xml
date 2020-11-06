@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">تم</string>
+    <string name="info_is_not_enable">غير مشغل</string>
+    <string name="info_is_not_available">غير موجود</string>
+    <string name="info_bluetooth_try_connection">الاتصال ب:</string>
+    <string name="info_bluetooth_connection_lost">اتصال بلوتوث فقد</string>
+    <string name="info_bluetooth_no_device">لم يتم العثور على جهاز بلوتوث</string>
+    <string name="info_bluetooth_no_device_retrying">لا يمكن إنشاء اتصال ، جارٍ إعادة المحاولة …</string>
+    <string name="info_bluetooth_connection_successful">تم الاتصال</string>
+    <string name="info_bluetooth_init">تهيئة جهاز بلوتوث</string>
+    <string name="info_bluetooth_connection_error">خطأ غير متوقع في البلوتوث</string>
+    <string name="info_bluetooth_connection_disconnected">"اغلق اتصال بلوتوث "</string>
+    <string name="label_bluetooth_searching">البحث عن ميزان البلوتوث</string>
+    <string name="label_bluetooth_searching_finished">"انتهى البحث "</string>
+    <string name="label_bt_device_no_support">الجهاز غير مدعوم</string>
+    <string name="permission_not_granted">إذن غير مقبول</string>
+    <string name="permission_bluetooth_info">يلزم الحصول على إذن موقع دقيق للبحث عن أجهزة بلوتوث. يمكن إبطالها بعد العثور على الجهاز.</string>
+    <string name="permission_bluetooth_info_title">معلومات</string>
+    <string name="label_scale_not_supported">هل ميزانك غير مدعوم؟</string>
+    <string name="label_click_to_help_add_support">انقر هنا للمساعدة في إضافة دعم له</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">אישור</string>
+    <string name="info_is_not_enable">מושבת</string>
+    <string name="info_is_not_available">לא זמין</string>
+    <string name="info_bluetooth_try_connection">התחברות אל:</string>
+    <string name="info_bluetooth_connection_lost">חיבור ה־Bluetooth אבד</string>
+    <string name="info_bluetooth_no_device">לא נמצא התקן Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">נוצר חיבור</string>
+    <string name="info_bluetooth_init">הפעלת התקן Bluetooth</string>
+    <string name="info_bluetooth_connection_error">שגיאת Bluetooth בלתי צפויה</string>
+    <string name="label_bluetooth_searching">מתבצע חיפוש אחר משקל ה־Bluetooth שלך</string>
+    <string name="label_bluetooth_searching_finished">החיפוש הסתיים</string>
+    <string name="label_bt_device_no_support">המכשיר לא נתמך</string>
+    <string name="permission_not_granted">ההרשאה נדחתה</string>
+    <string name="permission_bluetooth_info">נדרשת הרשאה לגשת אל המיקום כדי לחפש אחר התקני Bluetooth. ניתן לשלול את ההרשאה לאחר איתור המכשיר.</string>
+    <string name="permission_bluetooth_info_title">מידע</string>
+    <string name="label_scale_not_supported">האם המשקל שלך לא נתמך\?</string>
+    <string name="label_click_to_help_add_support">יש ללחוץ כאן כדי לסייע בהוספת תמיכה עבורו</string>
+    <string name="info_bluetooth_no_device_retrying">לא ניתן להתחבר, מתבצע ניסיון חוזר…</string>
+    <string name="info_bluetooth_connection_disconnected">חיבור ה־Bluetooth נסגר</string>
+    <string name="permission_location_service_info">יש להעניק גישה למיקום בהגדרות Android כדי לחפש התקני Bluetooth. אפשר לכבות את ההרשאה הזאת לאחר החיפוש.</string>
+    <string name="label_upgrade_to_openScale_pro">נא לשדרג לגרסה המקצועית של openScale לתמיכה ב־Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">לא ניתן להתחבר למשקל, נא לוודא שהוא פעיל.</string>
+</resources>

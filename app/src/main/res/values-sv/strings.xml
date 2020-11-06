@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">Ok</string>
+    <string name="info_is_not_enable">inaktiverad</string>
+    <string name="info_is_not_available">inte tillgänglig</string>
+    <string name="info_bluetooth_try_connection">Ansluter till:</string>
+    <string name="info_bluetooth_connection_lost">Förlorade Bluetooth-anslutningen</string>
+    <string name="info_bluetooth_no_device">Ingen Bluetooth-enhet hittades</string>
+    <string name="info_bluetooth_connection_successful">Anslutning etablerad</string>
+    <string name="info_bluetooth_init">Initiera Bluetooth-enhet</string>
+    <string name="info_bluetooth_connection_error">Oväntat Bluetooth fel</string>
+    <string name="label_bluetooth_searching">Söker efter din Bluetooth-våg</string>
+    <string name="label_bt_device_no_support">enheten stödjs inte</string>
+    <string name="label_bluetooth_searching_finished">Sökning klar</string>
+    <string name="permission_not_granted">Tillstånd beviljas inte</string>
+    <string name="permission_bluetooth_info">Platsbehörighet krävs för att söka efter Bluetooth-enheter. Det kan återkallas när enheten har hittats.</string>
+    <string name="permission_bluetooth_info_title">Info</string>
+    <string name="label_scale_not_supported">Stödjs inte din våg?</string>
+    <string name="label_click_to_help_add_support">Klicka här för att hjälpa till att lägga till stöd för den</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">Aceptar</string>
+    <string name="info_is_not_enable">desactivado</string>
+    <string name="info_is_not_available">no disponible</string>
+    <string name="info_bluetooth_try_connection">Conectando con:</string>
+    <string name="info_bluetooth_connection_lost">Se perdió la conexión Bluetooth</string>
+    <string name="info_bluetooth_no_device">No se encontró ningún dispositivo Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">Conectado</string>
+    <string name="info_bluetooth_init">Inicializar el dispositivo Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Error inesperado en Bluetooth</string>
+    <string name="label_bluetooth_searching">Buscando báscula Bluetooth</string>
+    <string name="label_bt_device_no_support">dispositivo no admitido</string>
+    <string name="label_bluetooth_searching_finished">Búsqueda finalizada</string>
+    <string name="permission_not_granted">Permiso no otorgado</string>
+    <string name="permission_bluetooth_info">Se requiere permiso para ubicar dispositivos Bluetooth. Este permiso puede ser revocado después de que se encontró el dispositivo.</string>
+    <string name="permission_bluetooth_info_title">Información</string>
+    <string name="label_scale_not_supported">¿Su báscula no está admitida\?</string>
+    <string name="label_click_to_help_add_support">Pulse aquí para ayudar a añadir la compatibilidad</string>
+    <string name="info_bluetooth_no_device_retrying">No se pudo establecer la conexión; reintentando…</string>
+    <string name="info_bluetooth_connection_disconnected">Conexión Bluetooth cerrada</string>
+    <string name="permission_location_service_info">Otorgue permiso para acceso a la ubicación, en la configuración de Android, para buscar dispositivos Bluetooth. Podrá revocarlo después.</string>
+    <string name="label_upgrade_to_openScale_pro">Cambie a la versión Pro de openScale para obtener la prestación de Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">No se pudo conectar con la báscula; asegúrese de que está encendida.</string>
+</resources>

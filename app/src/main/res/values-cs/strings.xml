@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_is_not_enable">vypnuto</string>
+    <string name="info_is_not_available">nedostupné</string>
+    <string name="info_bluetooth_connection_lost">Ztraceno bluetooth spojení</string>
+    <string name="info_bluetooth_no_device">Nebylo nalezeno žádné bluetooth zařízení</string>
+    <string name="info_bluetooth_connection_successful">Spojení navázáno</string>
+    <string name="info_bluetooth_init">Inicializovat bluetooth zařízení</string>
+    <string name="label_bt_device_no_support">zařízení není podporováno</string>
+    <string name="permission_bluetooth_info_title">Informace</string>
+    <string name="label_ok">OK</string>
+    <string name="info_bluetooth_try_connection">Přípojit se k:</string>
+    <string name="info_bluetooth_connection_error">Neočekavaná chyba Bluetooth</string>
+    <string name="label_bluetooth_searching">Hledání vaše Bluetooth váhy</string>
+    <string name="label_bluetooth_searching_finished">Hledání skončilo</string>
+    <string name="permission_not_granted">Oprávnění nebylo nastavené</string>
+    <string name="label_scale_not_supported">Není vaše váha podporovaná?</string>
+    <string name="info_bluetooth_no_device_retrying">Nepodařilo se připojit, zkouším znovu…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth spojení ukončeno</string>
+    <string name="permission_bluetooth_info">Oprávnění pro získání polohy je potřeba pro hledání Bluetooth zařízení. Oprávnění je možné odebrat poté, co bude zařízení nalezeno.</string>
+    <string name="permission_location_service_info">Pro hledání Bluetooth zařízení prosím udělte oprávnění k přístupu k poloze v nastavení Androidu. Poté ho můžete zase odebrat.</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Nemohu se připojit k váze. Ujistěte se prosím, že je zapnutá.</string>
+</resources>

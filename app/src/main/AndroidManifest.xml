@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.wombatapp"
+    tools:ignore="ImpliedTouchscreenHardware,MissingLeanbackLauncher">
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.example.wombatapp.minttihealth.health.App"
+        android:allowBackup="true"
+        android:icon="@drawable/de"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/de"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.example.wombatapp.FirebaseLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.wombatapp.addmeasurement.AddMeasurementActivity"></activity>
+
+        <meta-data
+            android:name="appkey"
+            android:value="902f8741c0814966b86d27326a14c265" />
+        <meta-data
+            android:name="appsecret"
+            android:value="cb6485aab56449afa5c65452a322cef2" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android."> -->
+        <!-- </meta-data> -->
+        <activity
+            android:name="com.example.wombatapp.support.SupportActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name="com.example.wombatapp.dashboard.DashboardActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.wombatapp.BluetoothSettingActivity" />
+        <activity android:name="com.example.wombatapp.AddNewUser.AddNewUser" />
+        <activity android:name="com.example.wombatapp.MainActivity">
+        </activity>
+
+        <service android:name="com.example.wombatapp.minttihealth.health.HcService" />
+        <service android:name="com.example.wombatapp.GoogleFitService" />
+    </application>
+
+</manifest>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Wombat</string>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">disabled</string>
+    <string name="info_is_not_available">not available</string>
+    <string name="info_bluetooth_try_connection">Connecting to:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth connection lost</string>
+    <string name="info_bluetooth_no_device">No Bluetooth device found</string>
+    <string name="info_bluetooth_no_device_retrying">Could not establish connection, retrying…</string>
+    <string name="info_bluetooth_connection_successful">Connected</string>
+    <string name="info_bluetooth_init">Initialize Bluetooth device</string>
+    <string name="info_bluetooth_connection_error">Unexpected Bluetooth error</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Could not connect to scale, please ensure it is on.</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth connection closed</string>
+    <string name="label_bluetooth_searching">Searching for your Bluetooth scale</string>
+    <string name="label_bluetooth_searching_finished">Search finished</string>
+    <string name="label_bt_device_no_support">device not supported</string>
+    <string name="permission_not_granted">Permission not granted</string>
+    <string name="permission_bluetooth_info">Location permission needed to search for Bluetooth devices. It can be revoked after the device is found.</string>
+    <string name="permission_location_service_info">Grant location access in the Android settings to search for Bluetooth devices. Optionally revoke it afterwards.</string>
+    <string name="permission_bluetooth_info_title">Info</string>
+    <string name="label_scale_not_supported">Is your scale not supported?</string>
+    <string name="label_click_to_help_add_support">Click here to help add support for it</string>
+    <string name="label_upgrade_to_openScale_pro">Please upgrade to openScale pro for Bluetooth support</string>
+    <string name="available_device">Available devices</string>
+    <string name="close">close</string>
+    <string name="google_fit_account">Connect new account with Google Fit<u>underline</u>.</string>
+    <string name="measure_now">Measure now</string>
+    <string name="hr_value">%1$s</string>
+    <string name="turn_on_location">turn on location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Blood_pressure">Blood \nPressure</string>
+    <string name="SPO2">SPO2 \n    </string>
+    <string name="ECG">ECG \n   </string>
+    <string name="lorem_ipsum">Lorem \nlpsum</string>
+    <string name="lorem_ipsum_sib">Lorem \nlpsum sib</string>
+    <string name="leak_and_check">There is a leak. Please check the gas path.</string>
+    <string name="measurement_void">Please keep quiet during the measurement.This measurement is invalid.</string>
+    <string name="ecg_auto_end">Auto end</string>
+    <string name="ecg_settings">ECG Settings</string>
+    <string name="click_here_to_see_the_full_ecg">Click here to see the full ECG.</string>
+    <string name="gain">Gain</string>
+    <string name="gain_value">Gain: %1$s</string>
+    <string name="pager_speed">Pager Speed</string>
+    <string name="connect">connect</string>
+    <string name="connecting">connecting...</string>
+    <string name="connected">connected</string>
+    <string name="sbp_value">SBP: %1$smmHg</string>
+    <string name="dbp_value">DBP: %1$smmHg</string>
+    <string name="spo2h_value">SpO₂: %1$s%%</string>
+    <string name="rr_max_value">R-R max: %1$s</string>
+    <string name="rr_min_value">R-R min: %1$s</string>
+    <string name="hrv_value">HRV: %1$s ms</string>
+    <string name="duration_value">Duration: %1$s s</string>
+    <string name="mood_value">Mood: %1$s</string>
+    <string name="rr_value">Respiratory rate: %1$s</string>
+    <string name="pager_speed_value">Pager Speed: %1$s</string>
+    <string name="turn_on_bluetooth">turn on bluetooth</string>
+    <string name="title_activity_firebase_login">FirebaseLogin</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="Sigin_With_Google">Signin \n With \n Google</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+<string name="web_client_id">148066403557-ddapkf003s8vk7ptuitnu7vualccj68n.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">U redu</string>
+    <string name="info_is_not_enable">isključeno</string>
+    <string name="info_is_not_available">nedostupno</string>
+    <string name="info_bluetooth_try_connection">Spajanje na:</string>
+    <string name="info_bluetooth_connection_lost">Izgubila se Bluetooth veza</string>
+    <string name="info_bluetooth_no_device">Nije pronađen nijedan uređaj</string>
+    <string name="info_bluetooth_connection_successful">Povezano</string>
+    <string name="info_bluetooth_init">Inicijaliziraj Bluetooth uređaj</string>
+    <string name="info_bluetooth_connection_error">Neočekivana Bluetooth greška</string>
+    <string name="label_bluetooth_searching">Traži se tvoja Bluetooth vaga</string>
+    <string name="label_bluetooth_searching_finished">Pretraga završena</string>
+    <string name="label_bt_device_no_support">uređaj nije podržan</string>
+    <string name="permission_not_granted">Nije dozvoljeno</string>
+    <string name="permission_bluetooth_info">Dozvola pristupu lokaciji je potrebna za traženje Bluetooth uređaja. Može se opet zabraniti nakon što se uređaj pronađe.</string>
+    <string name="permission_bluetooth_info_title">Informacije</string>
+    <string name="label_scale_not_supported">Je li tvoja vaga nije podržana\?</string>
+    <string name="label_click_to_help_add_support">Pritisni ovdje i pomogni dodati podršku za vagu</string>
+    <string name="label_upgrade_to_openScale_pro">Nadogradi na „openScale pro” za Bluetooth podršku</string>
+    <string name="permission_location_service_info">Dozvoli pristup lokaciji u Androidovim postavkama za traženje Bluetooth uređaja. Opcionalno zabrani pristup nakon toga.</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth veza je zatvorena</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Neuspjelo povezivanje s vagom, provjeri je li uključena.</string>
+    <string name="info_bluetooth_no_device_retrying">Neuspjelo uspostavljanje veze. Pokušaj se ponavlja …</string>
+</resources>

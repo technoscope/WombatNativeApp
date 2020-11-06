@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">zakázané</string>
+    <string name="info_is_not_available">nedostupné</string>
+    <string name="info_bluetooth_try_connection">Pripájanie k:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth pripojenie sa prerušilo</string>
+    <string name="info_bluetooth_no_device">Nenašli sa žiadne Bluetooth zariadenia</string>
+    <string name="info_bluetooth_connection_successful">Pripojené</string>
+    <string name="info_bluetooth_init">Inicializácia Bluetooth zariadenia</string>
+    <string name="info_bluetooth_connection_error">Neočakávaná chyba Bluetooth</string>
+    <string name="label_bluetooth_searching">Prebieha vyhľadávanie vašej Bluetooth váhy</string>
+    <string name="label_bt_device_no_support">nepodporované zariadenie</string>
+    <string name="label_bluetooth_searching_finished">Vyhľadávanie dokončené</string>
+    <string name="permission_not_granted">Povolenie nebolo udelené</string>
+    <string name="permission_bluetooth_info">Vyžaduje sa povolenie prístupu k polohe na vyhľadávanie bluetooth zariadení. Po nájdení zaradenia ho môžete zakázať.</string>
+    <string name="permission_bluetooth_info_title">Info</string>
+    <string name="label_scale_not_supported">Vaša váha nie je podporovaná\?</string>
+    <string name="info_bluetooth_no_device_retrying">Nepodarilo sa pripojiť, znovu…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth spojenie ukončené</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Nepodarilo sa pripojiť k váhe. Overte, či je váha zapnutá.</string>
+    <string name="label_upgrade_to_openScale_pro">Pre podporu Bluetooth inovujte na openScale pro</string>
+    <string name="label_click_to_help_add_support">Kliknite sem a pomôžte pre ňu pridať podporu</string>
+    <string name="permission_location_service_info">Pre vyhľadanie Bluetooth zariadení prosím udeľte oprávnenie prístupu k polohe v nastaveniach Androidu. Potom ho môžete zase odobrať.</string>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">決定</string>
+    <string name="info_is_not_enable">已停用</string>
+    <string name="info_is_not_available">無法提供</string>
+    <string name="info_bluetooth_try_connection">連結中：</string>
+    <string name="info_bluetooth_connection_lost">藍芽連結中斷</string>
+    <string name="info_bluetooth_no_device">找不到藍芽設備</string>
+    <string name="info_bluetooth_connection_successful">連結成功</string>
+    <string name="info_bluetooth_init">啟動藍芽設備</string>
+    <string name="info_bluetooth_connection_error">藍芽出現錯誤</string>
+    <string name="label_bluetooth_searching">正在搜尋您的藍芽量重器</string>
+    <string name="label_bluetooth_searching_finished">搜尋完成</string>
+    <string name="label_bt_device_no_support">不支援此器材</string>
+    <string name="permission_not_granted">未有開放權限</string>
+    <string name="permission_bluetooth_info">搜尋藍芽器材時， 需要開放大概位置的權限。 
+\n當搜尋完成時， 此權限可以再次關上。</string>
+    <string name="permission_bluetooth_info_title">資料</string>
+    <string name="label_scale_not_supported">你的量重器不支援嗎？</string>
+    <string name="label_click_to_help_add_support">請點擊此處以協助支援</string>
+    <string name="info_bluetooth_no_device_retrying">無法建立連接，重試中…</string>
+    <string name="info_bluetooth_connection_disconnected">藍牙連接已關閉</string>
+    <string name="permission_location_service_info">請在Android系統中授權位置訪問的權限以使搜尋藍牙設備。您之後可以取消位置訪問的權限。</string>
+</resources>

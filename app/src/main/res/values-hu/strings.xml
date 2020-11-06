@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">Ok</string>
+    <string name="info_is_not_enable">letiltva</string>
+    <string name="info_is_not_available">nem elérhető</string>
+    <string name="info_bluetooth_try_connection">Kapcsolódás:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth kapcsolat megszakadt</string>
+    <string name="info_bluetooth_no_device">Nem találtam Bluetooth eszközt</string>
+    <string name="info_bluetooth_connection_successful">Kapcsolat létrejött</string>
+    <string name="info_bluetooth_init">Bluetooth eszköz inicializálása</string>
+    <string name="info_bluetooth_connection_error">Váratlan Bluetooth hiba</string>
+    <string name="label_bluetooth_searching">Bluetooth mérlegének keresése</string>
+    <string name="label_bluetooth_searching_finished">Keresés befejeződött</string>
+    <string name="label_bt_device_no_support">eszköz nincs támogatva</string>
+    <string name="permission_not_granted">Hozzáférés nincs megadva</string>
+    <string name="permission_bluetooth_info_title">Infó</string>
+    <string name="permission_bluetooth_info">A Bluetooth-eszközök kereséséhez szükséges a tartózkodási hely hozzáférése. A készülék megtalálása után visszavonható.</string>
+    <string name="label_scale_not_supported">Nincs a mérlege támogatva\?</string>
+    <string name="label_click_to_help_add_support">Kattintson ide, segíteni a támogatás hozzáadáshoz</string>
+    <string name="info_bluetooth_no_device_retrying">Kapcsolat nem hozható létre, újra…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth kapcsolat lezárva</string>
+    <string name="permission_location_service_info">Adja meg a tartózkodási hely hozzáférést az Android beállításokban a Bluetooth eszközök kereséséhez. Később visszavonhatja.</string>
+    <string name="label_upgrade_to_openScale_pro">Kérem frissítsen az openScale Pro-ra a Bluetooth támogatáshoz</string>
+</resources>

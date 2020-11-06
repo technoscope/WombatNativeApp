@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">আচ্ছা</string>
+    <string name="info_bluetooth_connection_disconnected">ব্লুটুথ কানেকশন বন্ধ</string>
+    <string name="info_bluetooth_connection_error_scale_offline">স্কেল সংযোগ করা যায়নি, অনুগ্রহ করে নিশ্চিত করুন এটি অন আছে ।</string>
+    <string name="info_bluetooth_connection_error">অপ্রত্যাশিত ব্লুটুথ ত্রুটি</string>
+    <string name="info_bluetooth_init">ব্লুটুথ ডিভাইস প্রস্তুত করুন</string>
+    <string name="info_bluetooth_connection_successful">সংযুক্ত</string>
+    <string name="info_bluetooth_no_device_retrying">সংযোগ স্থাপন করা যায়নি, আবার চেষ্টা করা হচ্ছে …</string>
+    <string name="info_bluetooth_no_device">কোনও ব্লুটুথ ডিভাইস পাওয়া যায় নি</string>
+    <string name="info_bluetooth_connection_lost">ব্লুটুথ সংযোগ বিচ্ছিন্ন হয়েছে</string>
+    <string name="info_bluetooth_try_connection">সাথে সংযোগ করা হয়েছে:</string>
+    <string name="info_is_not_available">প্রাপ্য নয়</string>
+    <string name="info_is_not_enable">অক্ষম</string>
+    <string name="permission_bluetooth_info_title">তথ্য</string>
+    <string name="permission_location_service_info">ব্লুটুথ ডিভাইসগুলি অনুসন্ধান করতে অ্যান্ড্রয়েড সেটিংসে অবস্থান পাওয়ারঅনুমতি দিন। ঐচ্ছিকভাবে এটি পরে বাতিল করুন।</string>
+    <string name="permission_bluetooth_info">ব্লুটুথ ডিভাইসগুলি অনুসন্ধান করার জন্য অবস্থানের অনুমতি প্রয়োজন। ডিভাইসটি খুঁজে পাওয়ার পরে এটি প্রত্যাহার করা যায়।</string>
+    <string name="permission_not_granted">অনুমতি দেয়া হয়নি</string>
+    <string name="label_bt_device_no_support">ডিভাইস সমর্থিত নয়</string>
+    <string name="label_bluetooth_searching_finished">অনুসন্ধান শেষ</string>
+    <string name="label_bluetooth_searching">ব্লুটুথ স্কেলের জন্য অনুসন্ধান হচ্ছে</string>
+</resources>

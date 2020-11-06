@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_is_not_available">nicht verfügbar</string>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">ausgeschaltet</string>
+    <string name="info_bluetooth_connection_error">Unerwarteter Bluetooth-Fehler</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth Verbindung unterbrochen</string>
+    <string name="info_bluetooth_connection_successful">Verbunden</string>
+    <string name="info_bluetooth_no_device">Kein Bluetooth Gerät gefunden</string>
+    <string name="info_bluetooth_try_connection">Verbinde mit:</string>
+    <string name="info_bluetooth_init">Initializiere Bluetooth Gerät</string>
+    <string name="label_bt_device_no_support">Gerät wird nicht unterstützt</string>
+    <string name="label_bluetooth_searching">Suche nach Ihrer Bluetooth Waagen</string>
+    <string name="label_bluetooth_searching_finished">Suche beendet</string>
+    <string name="permission_not_granted">Zugriff verweigert</string>
+    <string name="permission_bluetooth_info">Erlaubnis erforderlich um auf den Standort zuzugreifen, um nach Bluetooth-Geräten zu suchen. Sobald das Gerät gefunden wurde kann diese widerrufen werden.</string>
+    <string name="permission_bluetooth_info_title">Information</string>
+    <string name="label_scale_not_supported">Wird deine Waage nicht unterstützt?</string>
+    <string name="label_click_to_help_add_support">Klicke hier, wenn du helfen möchtest</string>
+    <string name="info_bluetooth_no_device_retrying">Kann keine Verbindung herstellen, versuche erneut…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth Verbindung getrennt</string>
+    <string name="permission_location_service_info">Gewährleisten Sie den Standortzugriff in den Android-Einstellungen, um nach Bluetooth-Geräten zu suchen. Sie können es anschließend wieder widerrufen.</string>
+    <string name="label_upgrade_to_openScale_pro">Bitte upgraden Sie auf openScale pro für Bluetooth-Unterstützung</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Keine Verbindung zur Waage, bitte überprüfen, ob sie eingeschaltet ist.</string>
+</resources>

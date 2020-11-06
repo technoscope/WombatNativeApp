@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply plugin: "androidx.navigation.safeargs"
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.example.wombatapp"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.material:material:1.1.0-alpha09'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'info.hoang8f:android-segmented:1.0.6'
+    // CustomActivityOnCrash
+    //implementation 'cat.ereza:customactivityoncrash:2.2.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:leanback-v17:23.1.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0-rc01'
+    implementation 'com.google.android.gms:play-services-fitness:19.0.0'
+    implementation 'com.google.gms:google-services:4.3.3'
+    implementation 'com.google.firebase:firebase-database:16.0.4'
+    testImplementation 'junit:junit:4.13'
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    // Room
+    implementation 'androidx.room:room-runtime:2.2.5'
+    // Timber
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    // Simple CSV
+    implementation 'com.j256.simplecsv:simplecsv:2.6'
+
+//    // Blessed Android
+//    implementation 'com.github.weliem:blessed-android:1.18'
+
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+    androidTestImplementation 'androidx.room:room-testing:2.2.5'
+    implementation project(path: ':blessed')
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //  implementation project(path: ':openscale')
+
+    /*rxJava*/
+    implementation 'io.reactivex:rxjava:1.3.0'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    /*zxing*/
+    implementation 'com.google.zxing:core:3.4.0'
+
+    // Mintti Health BLE
+
+    implementation(name: 'BleDev_v2.5.1', ext: 'aar')
+    implementation(name: 'CssServer_v2.5.1', ext: 'aar')
+    implementation(name: 'CssSocket_v2.5.1', ext: 'aar')
+
+    // Google Fit API's
+
+    implementation 'com.google.android.gms:play-services-fitness:19.0.0'
+    implementation 'com.google.android.gms:play-services-auth:18.1.0'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation platform('com.google.firebase:firebase-bom:25.12.0')
+    implementation project(":anychart")
+
+    implementation 'im.dacer:AndroidCharts:1.0.4'
+}
+apply plugin: 'com.google.gms.google-services'

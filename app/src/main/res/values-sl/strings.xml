@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="label_ok">OK</string>
+
+    <string name="info_is_not_enable">onemogočeno</string>
+    <string name="info_is_not_available">ni na voljo</string>
+    <string name="info_bluetooth_try_connection">Poveži z:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth povezava izgubljena</string>
+    <string name="info_bluetooth_no_device">Nobena Bluetooth naprava ni bila najdena</string>
+    <string name="info_bluetooth_connection_successful">Povezava vzpostavljena</string>
+    <string name="info_bluetooth_init">Zaženi Bluetooth napravo</string>
+    <string name="info_bluetooth_connection_error">Nepričakovana Bluetooth napaka</string>
+
+    <string name="label_bluetooth_searching">Iščem Bluetooth tehtnico</string>
+    <string name="label_bluetooth_searching_finished">Iskanje končano</string>
+
+    <string name="label_bt_device_no_support">Naprava ni podprta</string>
+
+    <string name="permission_not_granted">Dovoljenja niso bila pridobljena</string>
+    <string name="permission_bluetooth_info">Dovoljenje je potrebno za približno določanje lokacije Bluetooth naprave. Dovoljenje je lahko odvzeto takoj po tem, ko je naprava najdena.</string>
+    <string name="permission_bluetooth_info_title">Informacije</string>
+    <string name="label_scale_not_supported">Je vaša tehtnica že podprta?</string>
+    <string name="label_click_to_help_add_support">Kliknite tukaj, če želite pomagati</string>
+</resources>

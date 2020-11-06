@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bluetooth_menu"
+        android:icon="@drawable/ic_bluetooth_searching"
+        android:enabled="true"
+        android:title="Ble Scale Setting" />
+    <item
+        android:id="@+id/invoke_bluthooth"
+        android:icon="@drawable/ic_bluetooth_connection_success"
+        android:enabled="true"
+        android:title="Invoke Bluetooth" />
+    <item
+        android:id="@+id/ble_minttihealth"
+        android:title="Ble Mintti Health"
+        android:enabled="true"/>
+    <item
+        android:id="@+id/signout_id"
+        android:title="SignOut Google Fit"
+        android:enabled="true"/>
+
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_bluetooth_searching">Etsitään Bluetooth-vaakaasi</string>
+    <string name="label_bluetooth_searching_finished">Etsiminen päättyi</string>
+    <string name="label_ok">OK</string>
+    <string name="label_upgrade_to_openScale_pro">Ole hyvä ja päivitä openScale pro-versioon saadaksesi Bluetoorh-tuen</string>
+    <string name="label_click_to_help_add_support">Paina tästä ja auta lisäämään tuki sille</string>
+    <string name="label_scale_not_supported">Eikö vaakasi ole tuettuna\?</string>
+    <string name="permission_bluetooth_info_title">Tiedot</string>
+    <string name="permission_bluetooth_info">Lupa paikkatietoihin tarvitaan Bluetooth-laitteiden etsimistä varten. Luvan voi perua, kun laite on löytynyt.</string>
+    <string name="permission_location_service_info">Salli pääsy paikkatietoihin Androidin asetuksista Bluetooth-laitteiden etsimistä varten. Luvan voi perua jälkikäteen.</string>
+    <string name="permission_not_granted">Lupaa ei annettu</string>
+    <string name="label_bt_device_no_support">laite ei ole tuettu</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth-yhteys katkaistu</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Vaakaan ei saatu yhteyttä, varmista että se on päällä.</string>
+    <string name="info_bluetooth_connection_error">Odottamaton Bluetooth-virhe</string>
+    <string name="info_bluetooth_init">Alusta Bluetooth-laite</string>
+    <string name="info_bluetooth_connection_successful">Yhdistetty</string>
+    <string name="info_bluetooth_no_device_retrying">Yhteyden muodostus epäonnistui, yritetään uudelleen…</string>
+    <string name="info_bluetooth_no_device">Bluetooth-laitteita ei löytynyt</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth-yhteys katkennut</string>
+    <string name="info_bluetooth_try_connection">Yhdistetään:</string>
+    <string name="info_is_not_available">ei saatavilla</string>
+    <string name="info_is_not_enable">poissa</string>
+</resources>

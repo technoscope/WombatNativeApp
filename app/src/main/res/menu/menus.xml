@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigation_support"
+        android:icon="@drawable/ic_devices"
+        android:enabled="true"
+        android:title="Support" />
+
+    <item
+        android:id="@+id/navigation_plan"
+        android:enabled="true"
+        android:icon="@drawable/ic_family"
+        android:title="Plan" />
+
+    <item
+        android:id="@+id/navigation_setting"
+        android:enabled="true"
+        android:icon="@drawable/ic_cog"
+        android:title="Setting" />
+
+</menu>

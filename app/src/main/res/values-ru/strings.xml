@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">ОК</string>
+    <string name="info_is_not_enable">выключено</string>
+    <string name="info_is_not_available">не доступна</string>
+    <string name="info_bluetooth_try_connection">Соединение с:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth соединение потеряно</string>
+    <string name="info_bluetooth_no_device">Устройство Bluetooth не найдено</string>
+    <string name="info_bluetooth_connection_successful">Подключено</string>
+    <string name="info_bluetooth_init">Инициализировать Bluetooth устройство</string>
+    <string name="info_bluetooth_connection_error">Неожиданная ошибка Bluetooth</string>
+    <string name="label_bluetooth_searching">Поиск Ваших Bluetooth весов</string>
+    <string name="label_bluetooth_searching_finished">Поиск завершен</string>
+    <string name="label_bt_device_no_support">устройство не поддерживается</string>
+    <string name="permission_not_granted">Разрешение не получено</string>
+    <string name="permission_bluetooth_info_title">Информация</string>
+    <string name="label_scale_not_supported">Ваши весы не поддерживаются?</string>
+    <string name="permission_bluetooth_info">Для поиска устройства Bluetooth требуется разрешение доступа к местоположению. После обнаружения устройства доступ можно снова заблокировать.</string>
+    <string name="label_click_to_help_add_support">Нажмите здесь, чтобы помочь нам добавить поддержку</string>
+    <string name="info_bluetooth_no_device_retrying">Не удается подключиться, пробуем снова…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth соединение закрыто</string>
+    <string name="permission_location_service_info">Предоставьте доступ к местоположению в настройках Android для нахождения устройств Bluetooth. После соединения доступ может быть отозван.</string>
+    <string name="label_upgrade_to_openScale_pro">Пожалуйста, обновите до openScale Pro для подддержки Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Не удалось подключиться к весам, проверьте, что они включены.</string>
+</resources>

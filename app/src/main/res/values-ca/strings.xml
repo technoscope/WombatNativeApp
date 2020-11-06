@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">D\'acord</string>
+    <string name="info_is_not_enable">desactivat</string>
+    <string name="info_is_not_available">no disponible</string>
+    <string name="info_bluetooth_try_connection">S\'està connectant a:</string>
+    <string name="info_bluetooth_connection_lost">S\'ha perdut la connexió Bluetooth</string>
+    <string name="info_bluetooth_no_device">No s\'ha trobat cap dispositiu Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">S\'hi ha connectat</string>
+    <string name="info_bluetooth_init">Inicialitza el dispositiu Bluetooth</string>
+    <string name="info_bluetooth_connection_error">S\'ha produït un error inesperat del Bluetooth</string>
+    <string name="label_bluetooth_searching">S\'està cercant la bàscula Bluetooth</string>
+    <string name="label_bt_device_no_support">dispositiu no suportat</string>
+    <string name="info_bluetooth_no_device_retrying">No s\'ha pogut establir una connexió, s\'està tornant a provar…</string>
+    <string name="info_bluetooth_connection_disconnected">S\'ha tancat la connexió Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Cerca finalitzada</string>
+    <string name="permission_not_granted">Permís no concedit</string>
+    <string name="permission_bluetooth_info">Cal el permís d\'ubicació per a cercar dispositius Bluetooth. Podeu revocar-lo després de trobar el dispositiu.</string>
+    <string name="permission_location_service_info">Concediu accés a la ubicació a la configuració d\'Android per a cercar dispositius Bluetooth. Si voleu, podeu revocar-lo després.</string>
+    <string name="permission_bluetooth_info_title">Informació</string>
+    <string name="label_scale_not_supported">La vostra bàscula no està suportada\?</string>
+    <string name="label_click_to_help_add_support">Premeu aquí per a ajudar a afegir-hi suport</string>
+    <string name="label_upgrade_to_openScale_pro">Actualitzeu a openScale pro per a obtenir suport de Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">No s\'ha pogut connectar amb la bàscula, assegureu-vos que està engegada.</string>
+</resources>

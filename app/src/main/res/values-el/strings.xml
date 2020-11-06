@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">εντάξει</string>
+    <string name="info_is_not_enable">απενεργοποιημένο</string>
+    <string name="info_is_not_available">μη διαθέσιμο</string>
+    <string name="info_bluetooth_try_connection">Σύνδεση σε:</string>
+    <string name="info_bluetooth_connection_lost">Χάθηκε σύνδεση με Bluetooth</string>
+    <string name="info_bluetooth_no_device">Δεν βρέθηκε συσκευή Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">Σύνδεση εδραιώθηκε</string>
+    <string name="info_bluetooth_init">Αρχικοποίησε συσκευή Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Απρόσμενο σφάλμα Bluetooth</string>
+    <string name="label_bluetooth_searching">Αναζητώντας για την ζυγαριά σας με Bluetooth ικανότητα</string>
+    <string name="label_bluetooth_searching_finished">Αναζήτηση ολοκληρώθηκε</string>
+    <string name="label_bt_device_no_support">Η συσκευή δεν υποστηρίζεται</string>
+    <string name="permission_not_granted">Δεν χορηγήθηκε άδεια</string>
+    <string name="permission_bluetooth_info">Χρειάζεται άδεια τοποθεσίας, για την αναζήτηση συσκευών Bluetooth. Μπορεί να ανακληθεί αφού βρεθεί η συσκευή.</string>
+    <string name="permission_bluetooth_info_title">Πληροφορίες</string>
+    <string name="label_scale_not_supported">Δεν υποστηρίζεται η ζυγαριά σας;</string>
+    <string name="label_click_to_help_add_support">Πατήστε εδώ για να βοηθήσετε, προσθέσετε υποστήριξη</string>
+    <string name="info_bluetooth_no_device_retrying">Δεν μπορεί να γίνει σύνδεση, ξαναδοκιμάζω…</string>
+    <string name="info_bluetooth_connection_disconnected">Η σύνδεση bluetooth έκλεισε</string>
+    <string name="permission_location_service_info">Χορηγήστε πρόσβαση τοποθεσίας στις ρυθμίσεις του Android για να ψάχνει συσκευές Bluetooth. Προαιρετικά ανακαλέστε το μεταγενέστερα.</string>
+    <string name="label_upgrade_to_openScale_pro">Παρακαλώ αναβαθμίστε σε openScale pro για υποστήριξη Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Δεν μπορεί να γίνει σύνδεση με την ζυγαριά, παρακαλώ σιγουρευτείτε ότι η ζυγαριά είναι αναμμένη</string>
+</resources>

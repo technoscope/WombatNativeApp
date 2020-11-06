@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_bluetooth_connection_error">Ocorreu um erro inesperado com o Bluetooth</string>
+    <string name="info_bluetooth_connection_lost">Ligação bluetooth perdida</string>
+    <string name="info_bluetooth_connection_successful">Ligação estabelecida</string>
+    <string name="info_bluetooth_init">Iniciar aparelho Bluetooh</string>
+    <string name="info_bluetooth_no_device">Nenhum aparelho Bluetooth encontrado</string>
+    <string name="info_bluetooth_try_connection">Conectando a:</string>
+    <string name="info_is_not_available">não disponível</string>
+    <string name="info_is_not_enable">Desativado</string>
+    <string name="label_ok">OK</string>
+    <string name="label_bluetooth_searching">Procurando balanças Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Busca finalizada</string>
+    <string name="label_bt_device_no_support">dispositivo não suportado</string>
+    <string name="permission_not_granted">Não permitido</string>
+    <string name="permission_bluetooth_info">openScale precisa de permissão para procurar dispositivos Bluetooth</string>
+    <string name="permission_bluetooth_info_title">Infos</string>
+    <string name="info_bluetooth_no_device_retrying">Não é possível estabelecer ligação, tentando novamente…</string>
+    <string name="info_bluetooth_connection_disconnected">Conexão Bluetooth terminada</string>
+</resources>

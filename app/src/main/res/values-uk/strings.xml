@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">Гаразд</string>
+    <string name="info_is_not_enable">вимкнуто</string>
+    <string name="info_is_not_available">не доступне</string>
+    <string name="info_bluetooth_try_connection">Підключення до:</string>
+    <string name="info_bluetooth_connection_lost">З\'єднання з Bluetouch втрачено</string>
+    <string name="info_bluetooth_no_device">Bluetouch пристрій не знайдено</string>
+    <string name="info_bluetooth_no_device_retrying">Не вдалося встановити з\'єднання, повторна спроба…</string>
+    <string name="info_bluetooth_connection_successful">З\'єднання встановлено</string>
+    <string name="info_bluetooth_init">Ініціалізація Bluetooth пристрою</string>
+    <string name="info_bluetooth_connection_error">Неочікувана помилка Bluetooth</string>
+    <string name="info_bluetooth_connection_disconnected">Підключення до Bluetooth закрито</string>
+    <string name="label_bluetooth_searching">Пошук ваших Bluetooth вагів</string>
+    <string name="label_bluetooth_searching_finished">Пошук завершено</string>
+    <string name="label_bt_device_no_support">пристрій не підтримується</string>
+    <string name="permission_not_granted">Дозволу не отримано</string>
+    <string name="permission_bluetooth_info">Доступ до позиціювання необхідний для пошуку Bluetooth пристроїв. Дозвіл можна буде відмінити після того як пристрій буде знайдено.</string>
+    <string name="permission_location_service_info">Надайте доступ до позиціювання в налаштуваннях Android для пошуку Bluetooth пристроїв. Надалі цей дозвіл можна відхилити.</string>
+    <string name="permission_bluetooth_info_title">Інформація</string>
+    <string name="label_scale_not_supported">Ваші ваги не підтримуються\?</string>
+    <string name="label_click_to_help_add_support">Натисніть тут, аби допомогти нам додати підтримку для них</string>
+    <string name="label_upgrade_to_openScale_pro">Будь ласка, оновіться до openScale pro версії для підтримки Bluetooth</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Не можу під\'єднатись до вагів, переконайтеся що вони увімкнені.</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="info_is_not_enable">desactivado</string>
+    <string name="info_is_not_available">non está dispoñible</string>
+    <string name="info_bluetooth_try_connection">Conectando a:</string>
+    <string name="info_bluetooth_connection_lost">Perdeuse a conexión Bluetooth</string>
+    <string name="info_bluetooth_no_device">Non se atopou un dispositivo Bluetooth</string>
+    <string name="info_bluetooth_connection_successful">Conectado</string>
+    <string name="info_bluetooth_init">Iniciar o dispositivo Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Erro de Bluetooth inesperado</string>
+    <string name="label_bluetooth_searching">Buscando báscula Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Busca finalizada</string>
+    <string name="label_bt_device_no_support">Dispositivo non soportado</string>
+    <string name="permission_not_granted">Permiso non concedido</string>
+    <string name="permission_bluetooth_info">Necesítase permiso de localización para para buscar dispositivos Bluetooth. Pódese retirar unha vez atopado o dispositivo.</string>
+    <string name="permission_bluetooth_info_title">Información</string>
+    <string name="label_scale_not_supported">A súa báscula non está soportada?</string>
+    <string name="label_click_to_help_add_support">Prema aquí para axudar a engadir soporte para ela</string>
+    <string name="label_upgrade_to_openScale_pro">Por favor actualice a openScale pro para ter soporte para Bluetooth</string>
+    <string name="permission_location_service_info">Outorgue permiso para acceso á ubicuación, na configuración de Android, para buscar dispositivos Bluetooth. Poderá quitalo despois.</string>
+    <string name="info_bluetooth_connection_disconnected">Conexión Bluetooth pechada</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Non se puido conectar coa báscula, por favor asegúrese de que está acendida.</string>
+    <string name="info_bluetooth_no_device_retrying">Non se puido establecer a conexión, reintentando…</string>
+    <string name="label_ok">Ok</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_available">利用不可</string>
+    <string name="info_is_not_enable">無効</string>
+    <string name="info_bluetooth_no_device">Bluetooth端末が見つかりませんでした</string>
+    <string name="info_bluetooth_try_connection">接続中：</string>
+    <string name="info_bluetooth_connection_error">予期しないBluetoothエラー</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth接続が切断されました</string>
+    <string name="info_bluetooth_connection_successful">接続しました</string>
+    <string name="info_bluetooth_init">Bluetooth接続を初期化する</string>
+    <string name="label_bluetooth_searching">Bluetooth対応体重計を検索中</string>
+    <string name="label_bluetooth_searching_finished">検索終了</string>
+    <string name="label_bt_device_no_support">端末はサポートされていません</string>
+    <string name="permission_not_granted">権限が付与されていません</string>
+    <string name="permission_bluetooth_info">Bluetoothデバイスを検索するには位置情報のアクセス許可が必要です。デバイスが見つかった後に取り消すことができます。</string>
+    <string name="label_scale_not_supported">あなたの体重計はサポートされていませんか？</string>
+    <string name="label_click_to_help_add_support">サポートの追加に協力するにはここをクリックしてください</string>
+    <string name="permission_bluetooth_info_title">情報</string>
+    <string name="info_bluetooth_no_device_retrying">接続を確立できませんでした。再試行しています…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth接続が閉じられました</string>
+    <string name="permission_location_service_info">Bluetooth設定を検索するには、Android設定で位置情報アクセスを許可します。必要に応じて、後で取り消してください。</string>
+    <string name="label_upgrade_to_openScale_pro">Bluetoothサポートは、openScale proにアップグレードしてください</string>
+    <string name="info_bluetooth_connection_error_scale_offline">体重計に接続できませんでした。オンになっていることを確認してください。</string>
+</resources>

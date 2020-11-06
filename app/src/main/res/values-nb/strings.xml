@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">avskrudd</string>
+    <string name="info_is_not_available">ikke tilgjengelig</string>
+    <string name="info_bluetooth_try_connection">Kobler til:</string>
+    <string name="info_bluetooth_connection_lost">Mistet Blåtann-forbindelse</string>
+    <string name="info_bluetooth_no_device">Fant ingen Blåtannsenheter</string>
+    <string name="info_bluetooth_connection_successful">Tilkoblet</string>
+    <string name="info_bluetooth_init">Igangsett Blåtannsenhet</string>
+    <string name="info_bluetooth_connection_error">Uventet Blåtannsfeil</string>
+    <string name="label_bluetooth_searching">Søker etter dine Blåtannsvekter</string>
+    <string name="label_bluetooth_searching_finished">Søk fullført</string>
+    <string name="label_bt_device_no_support">enheten støttes ikke</string>
+    <string name="permission_not_granted">Tilgang ikke innvilget</string>
+    <string name="permission_bluetooth_info">Plasseringstilgang kreves for å søke etter Blåtannsenheter. Tilgangen kan tilbakekalles etter at enheten er funnet.</string>
+    <string name="permission_bluetooth_info_title">Info</string>
+    <string name="label_scale_not_supported">Støttes ikke vekten din?</string>
+    <string name="label_click_to_help_add_support">Klikk her for å hjelpe til å legge til støtte for den</string>
+    <string name="info_bluetooth_no_device_retrying">Klarte ikke å etablere forbindelse, prøver igjen…</string>
+    <string name="info_bluetooth_connection_disconnected">Blåtannstilkobling lukket</string>
+    <string name="permission_location_service_info">Innvilg posisjonstilgang for å søke etter Blåtannsenheter. Du kan skru den av etterpå.</string>
+    <string name="label_upgrade_to_openScale_pro">Oppgrader til openScare pro for Blåtannsstøtte</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Klarte ikke koble til vekt, sjekk at den er påskrudd.</string>
+</resources>

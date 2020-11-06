@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="label_ok">OK</string>
+
+    <string name="info_is_not_enable">dezactivată</string>
+    <string name="info_is_not_available">indisponibilă</string>
+    <string name="info_bluetooth_try_connection">Conectare la:</string>
+    <string name="info_bluetooth_connection_lost">Conexiune Bluetooth pierdută</string>
+    <string name="info_bluetooth_no_device">Nici un dispozitiv Bluetooth detectat</string>
+    <string name="info_bluetooth_connection_successful">Conexiune stabilită</string>
+    <string name="info_bluetooth_init">Inițializare dispozitiv Bluetooth</string>
+    <string name="info_bluetooth_connection_error">"Eroare Bluetooth "</string>
+
+    <string name="label_bluetooth_searching">În curs de căutare a unui cântar Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Căutare încheiată</string>
+
+    <string name="label_bt_device_no_support">aparat care nu face parte din cele cunoscute</string>
+
+    <string name="permission_not_granted">Permisiune neacordată</string>
+    <string name="permission_bluetooth_info">Permisiunea accesului la localizare e necesară pentru a căuta dispozitive Bluetooth. Permisiunea poate fi revocată o dată ce dispozitivul a fost găsit.</string>
+    <string name="permission_bluetooth_info_title">Informație</string>
+
+    <string name="label_scale_not_supported">Cântarul dumneavostră nu e printre dispozitivele cunoscute?</string>
+    <string name="label_click_to_help_add_support">Clic aici pentru a ajuta la adăugare printre dispozitivele cunoscute</string>
+</resources>

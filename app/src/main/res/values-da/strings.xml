@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">deaktiveret</string>
+    <string name="info_is_not_available">ikke tilgængelig</string>
+    <string name="info_bluetooth_try_connection">Forbinder til:</string>
+    <string name="info_bluetooth_connection_lost">Ingen forbindelse til Bluetooth enhed</string>
+    <string name="info_bluetooth_no_device">Ingen Bluetooth-enhed fundet</string>
+    <string name="info_bluetooth_connection_successful">Forbindelse etableret</string>
+    <string name="info_bluetooth_init">Initierer Bluetooth enhed</string>
+    <string name="info_bluetooth_connection_error">Uventet Bluetooth fejl</string>
+    <string name="label_bluetooth_searching">Søger efter din Bluetooth personvægt</string>
+    <string name="label_bt_device_no_support">enheden er ikke understøttet</string>
+    <string name="label_bluetooth_searching_finished">Søgning afsluttet</string>
+    <string name="permission_not_granted">Tilladelse er ikke givet</string>
+    <string name="permission_bluetooth_info">Tilladelse til lokalbestemmelse er påkrævet for at søge efter Bluetooth-enheder.</string>
+    <string name="permission_bluetooth_info_title">Information</string>
+    <string name="label_scale_not_supported">Er denne personvægt understøttet\?</string>
+    <string name="label_click_to_help_add_support">Klik for at hjælpe med at tilføje understøttelse af personvægten</string>
+</resources>

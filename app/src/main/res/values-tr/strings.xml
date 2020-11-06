@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">Tamam</string>
+    <string name="info_is_not_enable">devre dışı</string>
+    <string name="info_is_not_available">Mevcut değil</string>
+    <string name="info_bluetooth_try_connection">Bağlanıyor:</string>
+    <string name="info_bluetooth_connection_lost">Bluetooth bağlantısı kesildi</string>
+    <string name="info_bluetooth_no_device">Bluetooth cihazı bulunamadı</string>
+    <string name="info_bluetooth_connection_successful">Bağlı</string>
+    <string name="info_bluetooth_init">Bluetooth aygıtını başlat</string>
+    <string name="info_bluetooth_connection_error">Beklenmeyen Bluetooth hatası</string>
+    <string name="label_bluetooth_searching">Bluetooth özellikli tartınız aranıyor</string>
+    <string name="label_bt_device_no_support">Aygıt desteklenmiyor</string>
+    <string name="label_bluetooth_searching_finished">Arama tamamlandı</string>
+    <string name="permission_not_granted">İzin verilmedi</string>
+    <string name="permission_bluetooth_info_title">Bilgi</string>
+    <string name="label_scale_not_supported">Tartınız desteklenmiyor mu\?</string>
+    <string name="permission_bluetooth_info">Bluetooth aygıtlarını aramak için konum izni gerekli. Aygıt bulunduktan sonra iptal edilebilir.</string>
+    <string name="label_click_to_help_add_support">Yardım ekleyerek destek olmak için buraya tıklayın</string>
+    <string name="info_bluetooth_no_device_retrying">Bağlantı kurulamadı, yeniden deneniyor…</string>
+    <string name="info_bluetooth_connection_disconnected">Bluetooth bağlantısı kapalı</string>
+    <string name="permission_location_service_info">Bluetooth aygıtlarını aramak için Android ayarlarından konum erişim izni verin. İsteğe bağlı olarak daha sonra iptal edebilirsiniz.</string>
+    <string name="label_upgrade_to_openScale_pro">Bluetooth desteği için openScale paralı sürüme yükseltin</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Tartı ile bağlantı kurulamıyor, lütfen açık olduğundan emin olun.</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_ok">OK</string>
+    <string name="info_is_not_enable">disabilitato</string>
+    <string name="info_is_not_available">non disponibile</string>
+    <string name="info_bluetooth_try_connection">Connessione a:</string>
+    <string name="info_bluetooth_connection_lost">Connessione Bluetooth persa</string>
+    <string name="info_bluetooth_no_device">Nessun dispositivo Bluetooth rilevato</string>
+    <string name="info_bluetooth_connection_successful">Connesso</string>
+    <string name="info_bluetooth_init">Inizializzazione dispositivo Bluetooth</string>
+    <string name="info_bluetooth_connection_error">Errore Bluetooth imprevisto</string>
+    <string name="label_bluetooth_searching">Ricerca della vostra bilancia Bluetooth</string>
+    <string name="label_bluetooth_searching_finished">Ricerca terminata</string>
+    <string name="label_bt_device_no_support">dispositivo non supportato</string>
+    <string name="permission_not_granted">Autorizzazione non concessa</string>
+    <string name="permission_bluetooth_info">L\'autorizzazione di geolocalizzazione è necessaria per la ricerca dei dispositivi Bluetooth. Può essere revocata dopo aver trovato il dispositivo.</string>
+    <string name="permission_bluetooth_info_title">Informazioni</string>
+    <string name="label_scale_not_supported">La tua bilancia non è supportata?</string>
+    <string name="label_click_to_help_add_support">Clicca qui per aiutare ad aggiungere il supporto</string>
+    <string name="info_bluetooth_no_device_retrying">Impossibile stabilire una connessione, nuovo tentativo in corso…</string>
+    <string name="info_bluetooth_connection_disconnected">Connessione Bluetooth chiusa</string>
+    <string name="permission_location_service_info">Concedi l\'accesso alla posizione dalle impostazioni di Android per ricercare i dispositivi Bluetooth. Questa autorizzazione può essere poi eventualmente revocata.</string>
+    <string name="info_bluetooth_connection_error_scale_offline">Impossibile connettersi alla bilancia, assicurati che sia accesa.</string>
+    <string name="label_upgrade_to_openScale_pro">Passa alla versione pro se vuoi il protocollo Bluetooth</string>
+</resources>
