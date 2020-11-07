@@ -58,7 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String tableStatementCreateBloodPressureTable = "CREATE TABLE " + BLOOD_PRESSURE_TABLE_NAME + "(" + USERNAME + " String," + SYSTOLIC_PRESSURE + " String," + DIASTOLIC_PRESSURE + " String,"  + HEART_PULSE_RATE_FOR_BLOOD_PRESSURE + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
     private static final String tableStatementCreateEcgTable = "CREATE TABLE " + ECG_TABLE_NAME + "(" + USERNAME + " String," + RRI_MAXIMUM + " String," + RRI_MINIMUM + " String,"  + HEART_RATE_FOR_ECG + " String," + HRV_ECG + " String," + MOOD + " String," + RESPIRATORY_RATE + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
 
-
     SQLiteDatabase db;
 
     public DatabaseHelper(@Nullable Context context) {
