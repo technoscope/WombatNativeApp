@@ -92,7 +92,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
         mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
         DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
         try {
-            Cursor cursor = databaseHelper.getMeasurement(username);
+            Cursor cursor = databaseHelper.getWeightData(username);
             if (cursor != null) {
                 if (cursor.moveToLast()) {
                     fatview.setText(cursor.getString(3));
@@ -116,7 +116,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
                 public void onChanged(String s) {
                     DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
                     try {
-                        Cursor cursor = databaseHelper.getMeasurement(s);
+                        Cursor cursor = databaseHelper.getWeightData(s);
                         if (cursor != null) {
                             if (cursor.moveToLast()) {
                                 fatview.setText(cursor.getString(3));

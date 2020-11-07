@@ -1,6 +1,7 @@
 package com.example.wombatapp.AddNewUser;
 
 public class UserDetailModel {
+    public String userIconId;
     public String username;
     public String dateofbirth;
     public String height;
@@ -9,6 +10,15 @@ public class UserDetailModel {
     public String goal2;
     public String goal3;
     public UserDetailModel(){}
+
+    public String getUserIconId() {
+        return userIconId;
+    }
+
+    public void setUserIconId(String userIconId) {
+        this.userIconId = userIconId;
+    }
+
     public String getUsername() {
         return username;
     }
