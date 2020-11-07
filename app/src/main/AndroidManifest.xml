@@ -61,7 +61,6 @@
         </activity>
 
         <service android:name="com.example.wombatapp.minttihealth.health.HcService" />
-        <service android:name="com.example.wombatapp.GoogleFitService" />
     </application>
 
 </manifest>

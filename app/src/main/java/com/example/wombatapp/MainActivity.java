@@ -145,9 +145,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
     Datamodel datamodel = new Datamodel();
     TextView age, gender;
     private boolean showScanList = true;
-
     StepModel stepModel = new StepModel();
-
 
     private BindDevListAdapter mAdapter;
     BleDeviceListDialogFragment mBleDeviceListDialogFragment;
@@ -164,9 +162,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
     private ResultCallback<Status> mCancelSubscriptionResultCallback;
     private ResultCallback<ListSubscriptionsResult> mListSubscriptionsResultCallback;
     private int GOOGLE_FIT_PERMISSIONS_REQUEST_CODE = 420;
-
     FitnessOptions fitnessOptions;
-
     private final Handler mHandler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
@@ -181,7 +177,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             }
         }
     };
-
     public void processDataSet(DataSet dataSet) {
         for (DataPoint dp : dataSet.getDataPoints()) {
             long dpStart = dp.getStartTime(TimeUnit.NANOSECONDS) / 1000000;
@@ -195,7 +190,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             }
         }
     }
-
     private final ObservableBoolean isLogin = App.isLogin;
     private final ObservableField<String> id = new ObservableField<>("");//当前选定的设备id
     private final ObservableField<String> key = new ObservableField<>("");//当前选定的设备key
@@ -1037,8 +1031,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                     a += value.asInt();
                 }
                 Toast.makeText(MainActivity.this, "Step: " + a, Toast.LENGTH_SHORT).show();
-
-
                // String step = String.valueOf(a);
                // stepModel.setStep(step);
 //                mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
@@ -1190,7 +1182,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         Log.e("History", "Data returned for Data type: " + dataSet.getDataType().getName());
         DateFormat dateFormat = DateFormat.getDateInstance();
         DateFormat timeFormat = DateFormat.getTimeInstance();
-
         for (DataPoint dp : dataSet.getDataPoints()) {
             Log.e("History", "Data point:");
             Log.e("History", "\tType: " + dp.getDataType().getName());
