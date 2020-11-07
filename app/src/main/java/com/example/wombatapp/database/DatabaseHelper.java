@@ -25,8 +25,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private static final String HEART_TABLE_NAME = "heartTable";
     private static final String PULSE_RATE = "pulse_rate";
-    private static final String MAX_PULSE_RATE = "max_pulse_rate";
-    private static final String HRV = "hrv";
     private static final String BLOOD_OXYGEN = "blood_oxygen";
 
     private static final String WEIGHT_TABLE_NAME = "weightTable";
@@ -52,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String RESPIRATORY_RATE = "respiratory_rate";
 
     private static final String tableStatementCreateUserTable = "CREATE TABLE " + USER_TABLE_NAME + "(" + USERNAME + " String," + GENDER + " String," + HEIGHT + " String,"  + PERSONAL_GOALS + " String," + USER_ICON_ID + " String," + BIRTHDATE + " String)";
-    private static final String tableStatementCreateHeartTable = "CREATE TABLE " + HEART_TABLE_NAME + "(" + USERNAME + " String," + PULSE_RATE + " String," + MAX_PULSE_RATE + " String," + HRV + " String,"  + BLOOD_OXYGEN + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
+    private static final String tableStatementCreateHeartTable = "CREATE TABLE " + HEART_TABLE_NAME + "(" + USERNAME + " String," + PULSE_RATE + " String," + BLOOD_OXYGEN + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
     private static final String tableStatementCreateWeightTable = "CREATE TABLE " + WEIGHT_TABLE_NAME + "(" + USERNAME + " String," + WEIGHT + " String," + MUSCLE_MASS + " String,"  + FAT + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
     private static final String tableStatementCreateSleepTable = "CREATE TABLE " + SLEEP_TABLE_NAME + "(" + USERNAME + " String," + SLEEP_TIME + " String," + DEEP_SLEEP_TIME + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
     private static final String tableStatementCreateBloodPressureTable = "CREATE TABLE " + BLOOD_PRESSURE_TABLE_NAME + "(" + USERNAME + " String," + SYSTOLIC_PRESSURE + " String," + DIASTOLIC_PRESSURE + " String,"  + HEART_PULSE_RATE_FOR_BLOOD_PRESSURE + " String," + REMARKS + " String," + DATE_AND_TIME + " String)";
@@ -101,6 +99,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result != 0;
     }
 
+    public boolean addMeasurementHeart(String username,String pulserate, String bloodOxygen, String remarks, String dataAndTime) {
+        db=this.getWritableDatabase();
+        ContentValues cv=new ContentValues();
+        cv.put(this.USERNAME,username);
+        cv.put(this.PULSE_RATE,pulserate);
+        cv.put(this.BLOOD_OXYGEN,bloodOxygen);
+        cv.put(this.REMARKS, remarks);
+        cv.put(this.DATE_AND_TIME,dataAndTime);
+        long result = db.insert(HEART_TABLE_NAME, null, cv);
+        return result != 0;
+    }
+
     public boolean addMeasurementWeight(String username, String weight, String muscle, String fat,String remarks, String dateAndTime) throws SQLiteException {
         db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -112,20 +122,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(this.DATE_AND_TIME, dateAndTime);
 
         long result = db.insert(WEIGHT_TABLE_NAME, null, cv);
-        return result != 0;
-    }
-
-    public boolean addMeasurementHeart(String username,String pulserate,String maxpulse,String hrv, String bloodOxygen, String remarks, String dataAndTime) {
-        db=this.getWritableDatabase();
-        ContentValues cv=new ContentValues();
-        cv.put(this.USERNAME,username);
-        cv.put(this.PULSE_RATE,pulserate);
-        cv.put(this.MAX_PULSE_RATE,maxpulse);
-        cv.put(this.HRV,hrv);
-        cv.put(this.BLOOD_OXYGEN,bloodOxygen);
-        cv.put(this.REMARKS, remarks);
-        cv.put(this.DATE_AND_TIME,dataAndTime);
-        long result = db.insert(HEART_TABLE_NAME, null, cv);
         return result != 0;
     }
 
@@ -187,6 +183,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cur = db.rawQuery("Select * from " + WEIGHT_TABLE_NAME + " where " + this.USERNAME + "='" + username + "'", null);
         return cur;
     }
+
+    public Cursor getBloodPressureData(String username) {
+        db = this.getReadableDatabase();
+        Cursor cur = db.rawQuery("Select * from " + BLOOD_PRESSURE_TABLE_NAME + " where " + this.USERNAME + "='" + username + "'", null);
+        return cur;
+    }
+
+    public Cursor getSleepData(String username) {
+        db = this.getReadableDatabase();
+        Cursor cur = db.rawQuery("Select * from " + SLEEP_TABLE_NAME + " where " + this.USERNAME + "='" + username + "'", null);
+        return cur;
+    }
+    public Cursor getEcgData(String username) {
+        db = this.getReadableDatabase();
+        Cursor cur = db.rawQuery("Select * from " + ECG_TABLE_NAME + " where " + this.USERNAME + "='" + username + "'", null);
+        return cur;
+    }
+
 
 
 //    //TimeOut

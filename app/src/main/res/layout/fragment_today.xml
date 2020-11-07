@@ -358,6 +358,41 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Last update:" />
+
+                    <TextView
+                        android:id="@+id/sleep_update_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sep 2,9:00" />
+
+                    <TextView
+                        android:id="@+id/btn_sleep_measure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{content::clickMeasure}"
+                        android:text="@string/measure_now"
+                        android:textColor="@color/colorPrimary"
+                        app:srcCompat="@drawable/pulse" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -365,7 +400,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/id_hscore"
+                        android:id="@+id/tv_remarks_sleep"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -526,6 +561,41 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Last update:" />
+
+                    <TextView
+                        android:id="@+id/weight_update_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sep 2,9:00" />
+
+                    <TextView
+                        android:id="@+id/btn_weight_measure"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="@{content::clickMeasure}"
+                        android:text="@string/measure_now"
+                        android:textColor="@color/colorPrimary"
+                        app:srcCompat="@drawable/pulse" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -533,7 +603,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/id_wscore"
+                        android:id="@+id/tv_remarks_weight"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

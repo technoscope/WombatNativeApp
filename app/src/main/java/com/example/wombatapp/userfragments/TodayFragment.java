@@ -203,8 +203,8 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
     }
 
     @Override
-    public void onSpO2Result(int bloodoxygen, int heartrate) {
-        model.setValue(bloodoxygen);
+    public void onSpO2Result(int spo2, int heartrate) {
+        model.setValue(spo2);
         model.setHr(heartrate);
     }
 

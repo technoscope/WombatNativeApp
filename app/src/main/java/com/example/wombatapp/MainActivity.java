@@ -114,6 +114,7 @@ import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
+
 import lib.linktop.common.CssSubscriber;
 import lib.linktop.intf.OnCssSocketRunningListener;
 import lib.linktop.obj.Device;
@@ -177,6 +178,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             }
         }
     };
+
     public void processDataSet(DataSet dataSet) {
         for (DataPoint dp : dataSet.getDataPoints()) {
             long dpStart = dp.getStartTime(TimeUnit.NANOSECONDS) / 1000000;
@@ -184,12 +186,13 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             for (Field field : dp.getDataType().getFields()) {
                 String fieldname = field.getName();
                 String fieldvalue = String.valueOf(dp.getValue(field));
-                Toast.makeText(MainActivity.this, "start time:"+dpStart+
-                        "\n end time"+dpEnd+"field name" + fieldname +
+                Toast.makeText(MainActivity.this, "start time:" + dpStart +
+                        "\n end time" + dpEnd + "field name" + fieldname +
                         "\n value: " + fieldvalue, Toast.LENGTH_SHORT).show();
             }
         }
     }
+
     private final ObservableBoolean isLogin = App.isLogin;
     private final ObservableField<String> id = new ObservableField<>("");//当前选定的设备id
     private final ObservableField<String> key = new ObservableField<>("");//当前选定的设备key
@@ -236,14 +239,14 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             onBleState(MonitorDataTransmissionManager.getInstance().getBleState());
         }
 
-        stepModel=ViewModelProviders.of(MainActivity.this).get(StepModel.class);
+        stepModel = ViewModelProviders.of(MainActivity.this).get(StepModel.class);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_main);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_btn);
-        measurementbtn=findViewById(R.id.id_measurement_activityy);
+        measurementbtn = findViewById(R.id.id_measurement_activityy);
         measurementbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -256,7 +259,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING);
         }
-
 
 
         databaseHelper = new DatabaseHelper(this);
@@ -301,6 +303,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 123);
         }
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -453,10 +456,16 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                     myEdit.putString("Fat", String.valueOf(round(scaleBtData.getFat(), 1)));
                     myEdit.commit();
 
-                    databaseHelper.addmeaurement(getIntent().getStringExtra("username").trim(),
+                    SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
+                    String currentDateAndTime = sdf.format(new Date());
+                    String remarks = "Great";
+                    databaseHelper.addMeasurementWeight(getIntent().getStringExtra("username").trim(),
                             String.valueOf(round(scaleBtData.getWeight(), 1)),
                             String.valueOf(round(scaleBtData.getMuscle(), 1)),
-                            String.valueOf(round(scaleBtData.getFat(), 1)));
+                            String.valueOf(round(scaleBtData.getFat(), 1)),
+                            remarks,
+                            currentDateAndTime);
+
                     datamodel.setFat(String.valueOf(round(scaleBtData.getFat(), 1)));
                     datamodel.setMuscle(String.valueOf(round(scaleBtData.getMuscle(), 1)));
                     datamodel.setWeight(String.valueOf(round(scaleBtData.getWeight(), 1)));
@@ -1001,7 +1010,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
     }
 
 
-
     @Override
     protected void onStop() {
         super.onStop();
@@ -1031,11 +1039,11 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                     a += value.asInt();
                 }
                 Toast.makeText(MainActivity.this, "Step: " + a, Toast.LENGTH_SHORT).show();
-               // String step = String.valueOf(a);
-               // stepModel.setStep(step);
+                // String step = String.valueOf(a);
+                // stepModel.setStep(step);
 //                mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
 //                mReference.child("StepData").child(getTodayDate()).setValue(stepModel);
-               // Toast.makeText(MainActivity.this, "Step " + step, Toast.LENGTH_SHORT).show();
+                // Toast.makeText(MainActivity.this, "Step " + step, Toast.LENGTH_SHORT).show();
             }
         };
         SensorRequest request = new SensorRequest.Builder()
@@ -1056,8 +1064,8 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                 mApiClient, DataType.TYPE_STEP_COUNT_DELTA);
         //long WEEK_IN_MS = 60 * 60 * 24;
         //Date now = new Date();
-      //  long endTime = now.getTime();
-    //    long startTime = endTime - (WEEK_IN_MS);
+        //  long endTime = now.getTime();
+        //    long startTime = endTime - (WEEK_IN_MS);
         Calendar cal = Calendar.getInstance();
         Date now = new Date();
         cal.setTime(now);
@@ -1174,7 +1182,8 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         Date date = new Date();
         return dateFormat.format(date);
     }
-//    public void displayStepDataForToday() {
+
+    //    public void displayStepDataForToday() {
 //        DailyTotalResult result = Fitness.HistoryApi.readDailyTotal( mApiClient, DataType.TYPE_STEP_COUNT_DELTA ).await(1, TimeUnit.MINUTES);
 //        showDataSet(result.getTotal());
 //    }
@@ -1187,7 +1196,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             Log.e("History", "\tType: " + dp.getDataType().getName());
             Log.e("History", "\tStart: " + dateFormat.format(dp.getStartTime(TimeUnit.MILLISECONDS)) + " " + timeFormat.format(dp.getStartTime(TimeUnit.MILLISECONDS)));
             Log.e("History", "\tEnd: " + dateFormat.format(dp.getEndTime(TimeUnit.MILLISECONDS)) + " " + timeFormat.format(dp.getStartTime(TimeUnit.MILLISECONDS)));
-            for(Field field : dp.getDataType().getFields()) {
+            for (Field field : dp.getDataType().getFields()) {
                 Log.e("History", "\tField: " + field.getName() +
                         " Value: " + dp.getValue(field));
                 //writeToFile(dp.getValue(field).asInt());
@@ -1196,6 +1205,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         }
 
     }
+
     protected void onDestroy() {
         if (!App.isUseCustomBleDevService) {
             unbindService(this);
