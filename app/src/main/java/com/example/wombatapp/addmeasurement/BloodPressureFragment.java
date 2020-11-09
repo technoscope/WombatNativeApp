@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.wombatapp.R;
+import com.example.wombatapp.database.DatabaseHelper;
 import com.example.wombatapp.databinding.FragmentBloodPressureBinding;
 import com.example.wombatapp.minttihealth.health.MeasureFragment2;
 import com.example.wombatapp.minttihealth.health.bean.Bp;
@@ -17,8 +18,15 @@ import com.linktop.whealthService.task.BpTask;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.ViewDataBinding;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
+
+import static com.example.wombatapp.MainActivity.USER_NAME;
 
 public class BloodPressureFragment extends MeasureFragment2 implements OnBpResultListener {
 
@@ -110,6 +118,12 @@ public class BloodPressureFragment extends MeasureFragment2 implements OnBpResul
         model.setDbp(diastolicPressure);
         model.setHr(heartRate);
         resetState();
+
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
+        String currentDateAndTime = sdf.format(new Date());
+        String remarks = "Great";
+        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+        databaseHelper.addMeasurementBloodPressure(USER_NAME,String.valueOf(systolicPressure),String.valueOf(diastolicPressure),String.valueOf(heartRate),remarks,currentDateAndTime);
     }
 
     @Override

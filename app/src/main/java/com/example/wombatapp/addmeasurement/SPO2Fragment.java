@@ -4,8 +4,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.wombatapp.MainActivity;
 import com.example.wombatapp.R;
+import com.example.wombatapp.database.DatabaseHelper;
 import com.example.wombatapp.databinding.FragmentSPO2Binding;
 import com.example.wombatapp.minttihealth.health.MeasureFragment;
 import com.example.wombatapp.minttihealth.health.MeasureFragment2;
@@ -19,6 +22,10 @@ import com.linktop.whealthService.task.OxTask;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.ViewDataBinding;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class SPO2Fragment extends MeasureFragment2 implements OnSpO2ResultListener {
 
@@ -98,9 +105,17 @@ public class SPO2Fragment extends MeasureFragment2 implements OnSpO2ResultListen
     }
 
     @Override
-    public void onSpO2Result(int spo2, int hr) {
-        model.setValue(spo2);
-        model.setHr(hr);
+    public void onSpO2Result(int bloodOxygen, int heartrate) {
+        model.setValue(bloodOxygen);
+        model.setHr(heartrate);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
+        String currentDateAndTime = sdf.format(new Date());
+        String remarks = "Great";
+        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+        boolean result = databaseHelper.addMeasurementHeart(MainActivity.USER_NAME,Integer.toString(heartrate),Integer.toString(bloodOxygen),remarks,currentDateAndTime);
+        if (!result)
+            Toast.makeText(getContext(),"Error in submitting data to database", Toast.LENGTH_LONG).show();
     }
 
     @Override

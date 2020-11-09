@@ -38,6 +38,14 @@ public class ECGFragment extends MeasureFragment2 implements OnEcgResultListener
     private EcgTask mEcgTask;
     private WaveSurfaceView waveView;
     private ECGDrawWave ecgDrawWave;
+    private int rrMax;
+    private int rrMin;
+    private int hr;
+    private int hrv;
+    private int mood;
+    private int rr;
+
+
     public ECGFragment() {
     }
     @Override
@@ -209,22 +217,38 @@ public class ECGFragment extends MeasureFragment2 implements OnEcgResultListener
         switch (key) {
             case RRI_MAX:
                 model.setRRMax(value);
+                rrMax = value;
+                Log.d("mylog", "rrmax : "+ value);
                 break;
             case RRI_MIN:
                 model.setRRMin(value);
+                rrMin = value;
+                Log.d("mylog", "RRI_MIN : "+ value);
                 break;
             case HR:
                 model.setHr(value);
+                hr = value;
+                Log.d("mylog", "HR : "+ value);
                 break;
             case HRV:
                 model.setHrv(value);
+                hrv = value;
+                Log.d("mylog", "HRV : "+ value);
                 break;
             case MOOD:
                 model.setMood(value);
+                mood = value;
+                Log.d("mylog", "MOOD : "+ value);
                 break;
             case RR://Respiratory rate.
                 model.setRr(value);
+                rr = value;
+                Log.d("mylog", "rr : "+ value);
                 break;
+        }
+
+        if(rrMax != 0 && rrMin != 0 && hr != 0 && hrv != 0 && mood != 0 && rr != 0){
+            Log.d("mylog", "onECGValues: WE GOT ALL VALUES OOOHHHH YEAAHHHH BABY");
         }
     }
 

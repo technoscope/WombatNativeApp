@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         GoogleApiClient.OnConnectionFailedListener, SharedPreferences.OnSharedPreferenceChangeListener, OnBleConnectListener, ServiceConnection,
         OnDeviceVersionListener, MonitorDataTransmissionManager.OnServiceBindListener, OnDeviceInfoListener {
     public HcService mHcService;
+    public static String USER_NAME;
     ViewPager viewPager;
     TabLayout tabs;
     private SharedPreferences prefs;
@@ -265,6 +266,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         prefs.registerOnSharedPreferenceChangeListener(this);
         name = findViewById(R.id.id_name_mainactivity);
         name.setText(getIntent().getStringExtra("username"));
+        USER_NAME = getIntent().getStringExtra("username");
         age = findViewById(R.id.id_age);
         gender = findViewById(R.id.id_gender);
         model = ViewModelProviders.of(this).get(ScaleModel.class);
