@@ -216,7 +216,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
         SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
         String currentDateAndTime = sdf.format(new Date());
         String remarks = "Great";
-        boolean result = databaseHelper.addMeasurementHeart(username,Integer.toString(heartrate),Integer.toString(bloodOxygen),remarks,currentDateAndTime);
+        boolean result = databaseHelper.addMeasurementHeart(username,Integer.toString(heartrate),Integer.toString(bloodOxygen),remarks,currentDateAndTime);  // here we are getting new data of heart
         if (!result)
             Toast.makeText(getContext(),"Error in submitting data to database", Toast.LENGTH_LONG).show();
         model.setValue(bloodOxygen);
