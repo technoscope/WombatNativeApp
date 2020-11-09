@@ -449,6 +449,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                     SharedPreferences sharedPreferences
                             = getSharedPreferences("measurement",
                             MODE_PRIVATE);
+
                     SharedPreferences.Editor myEdit = sharedPreferences.edit();
                     myEdit.putString("weight", String.valueOf(round(scaleBtData.getWeight(), 1)));
                     myEdit.putString("muscles", String.valueOf(round(scaleBtData.getMuscle(), 1)));
@@ -458,6 +459,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                     SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
                     String currentDateAndTime = sdf.format(new Date());
                     String remarks = "Great";
+
                     databaseHelper.addMeasurementWeight(getIntent().getStringExtra("username").trim(),
                             String.valueOf(round(scaleBtData.getWeight(), 1)),
                             String.valueOf(round(scaleBtData.getMuscle(), 1)),
