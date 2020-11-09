@@ -115,36 +115,34 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
             musclesview.setText("0");
             weightview.setText("0");
         }
-
-        modell = ViewModelProviders.of((FragmentActivity) getContext()).get(ScaleModel.class);
+        //   modell = ViewModelProviders.of((FragmentActivity) getContext()).get(ScaleModel.class);
         try {
-            modell.getName().observe(getActivity(), new Observer<String>() {
-                @Override
-                public void onChanged(String s) {
-                    DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
-                    try {
-                        Cursor cursor = databaseHelper.getWeightData(s);
-                        if (cursor != null) {
-                            if (cursor.moveToLast()) {
-                                tvUpdateTimeWeightData.setText(cursor.getString(5));
-                                tvRemarksWeight.setText(cursor.getString(4));
-                                fatview.setText(cursor.getString(3));
-                                musclesview.setText(cursor.getString(2));
-                                weightview.setText(cursor.getString(1));
-                            }
-                        } else {
-                            fatview.setText("0");
-                            musclesview.setText("0");
-                            weightview.setText("0");
-                        }
-                    } catch (NullPointerException e) {
-                        fatview.setText("0");
-                        musclesview.setText("0");
-                        weightview.setText("0");
-                    }
-                }
-            });
-
+//            modell.getName().observe(getActivity(), new Observer<String>() {
+//                @Override
+//                public void onChanged(String s) {
+//                    DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
+//                    try {
+//                        Cursor cursor = databaseHelper.getWeightData(s);
+//                        if (cursor != null) {
+//                            if (cursor.moveToLast()) {
+//                                tvUpdateTimeWeightData.setText(cursor.getString(5));
+//                                tvRemarksWeight.setText(cursor.getString(4));
+//                                fatview.setText(cursor.getString(3));
+//                                musclesview.setText(cursor.getString(2));
+//                                weightview.setText(cursor.getString(1));
+//                            }
+//                        } else {
+//                            fatview.setText("0");
+//                            musclesview.setText("0");
+//                            weightview.setText("0");
+//                        }
+//                    } catch (NullPointerException e) {
+//                        fatview.setText("0");
+//                        musclesview.setText("0");
+//                        weightview.setText("0");
+//                    }
+//                }
+//            });
             stepModel= ViewModelProviders.of(this).get(StepModel.class);
             stepModel.getStep().observe((LifecycleOwner) getContext(), new Observer<String>() {
                 @Override
