@@ -16,9 +16,7 @@ import com.example.wombatapp.minttihealth.health.MeasureFragment;
 import com.example.wombatapp.minttihealth.health.bean.SpO2;
 import com.example.wombatapp.minttihealth.health.wave.PPGDrawWave;
 import com.example.wombatapp.model.StepModel;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.linktop.MonitorDataTransmissionManager;
 import com.linktop.infs.OnSpO2ResultListener;
 import com.linktop.whealthService.MeasureType;
@@ -96,7 +94,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
 
         Bundle bundle = this.getArguments();
         username = bundle.getString("username").trim();
-        mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
+        //mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
         try {
             Cursor cursor = databaseHelper.getWeightData(username);
             if (cursor != null) {
@@ -117,6 +115,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
             musclesview.setText("0");
             weightview.setText("0");
         }
+
         modell = ViewModelProviders.of((FragmentActivity) getContext()).get(ScaleModel.class);
         try {
             modell.getName().observe(getActivity(), new Observer<String>() {
@@ -144,6 +143,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
                     }
                 }
             });
+
             stepModel= ViewModelProviders.of(this).get(StepModel.class);
             stepModel.getStep().observe((LifecycleOwner) getContext(), new Observer<String>() {
                 @Override
