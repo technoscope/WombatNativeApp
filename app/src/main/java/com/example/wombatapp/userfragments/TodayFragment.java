@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wombatapp.R;
 import com.example.wombatapp.database.DatabaseHelper;
@@ -42,7 +43,7 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class TodayFragment extends MeasureFragment implements OnSpO2ResultListener, MonitorDataTransmissionManager.OnServiceBindListener {
 
-    TextView fatview, musclesview, weightview,steptext;
+    TextView fatview, musclesview, weightview,steptext,tvUpdateTimeWeightData, tvRemarksWeight;
     ScaleModel modell = new ScaleModel();
     StepModel stepModel=new StepModel();
     Datamodel datamodel = new Datamodel();
@@ -50,6 +51,8 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
     private OxTask mOxTask;
     private PPGDrawWave oxWave;
     DatabaseReference mReference;
+    DatabaseHelper databaseHelper;
+    String username;
 
     public TodayFragment() {
     }
@@ -81,20 +84,25 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
         super.onViewCreated(view, savedInstanceState);
         SharedPreferences sh = getActivity().getSharedPreferences("measurement",
                 MODE_PRIVATE);
+        databaseHelper = new DatabaseHelper(getContext());
         fatview = view.findViewById(R.id.id_fat);
         steptext=view.findViewById(R.id.id_steps);
         TextView textView = view.findViewById(R.id.id_time);
         textView.setText(getTodayDate());
         musclesview = view.findViewById(R.id.id_musclesmass);
         weightview = view.findViewById(R.id.id_weight);
+        tvUpdateTimeWeightData = view.findViewById(R.id.weight_update_time);
+        tvRemarksWeight = view.findViewById(R.id.tv_remarks_weight);
+
         Bundle bundle = this.getArguments();
-        String username = bundle.getString("username");
+        username = bundle.getString("username").trim();
         mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        DatabaseHelper databaseHelper = new DatabaseHelper(getContext());
         try {
             Cursor cursor = databaseHelper.getWeightData(username);
             if (cursor != null) {
                 if (cursor.moveToLast()) {
+                    tvUpdateTimeWeightData.setText(cursor.getString(5));
+                    tvRemarksWeight.setText(cursor.getString(4));
                     fatview.setText(cursor.getString(3));
                     musclesview.setText(cursor.getString(2));
                     weightview.setText(cursor.getString(1));
@@ -122,6 +130,7 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
                                 fatview.setText(cursor.getString(3));
                                 musclesview.setText(cursor.getString(2));
                                 weightview.setText(cursor.getString(1));
+                                tvUpdateTimeWeightData.setText(cursor.getString(5));
                             }
                         } else {
                             fatview.setText("0");
@@ -203,8 +212,14 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
     }
 
     @Override
-    public void onSpO2Result(int spo2, int heartrate) {
-        model.setValue(spo2);
+    public void onSpO2Result(int bloodOxygen, int heartrate) {
+        SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy_HHmmss", Locale.getDefault());
+        String currentDateAndTime = sdf.format(new Date());
+        String remarks = "Great";
+        boolean result = databaseHelper.addMeasurementHeart(username,Integer.toString(heartrate),Integer.toString(bloodOxygen),remarks,currentDateAndTime);
+        if (!result)
+            Toast.makeText(getContext(),"Error in submitting data to database", Toast.LENGTH_LONG).show();
+        model.setValue(bloodOxygen);
         model.setHr(heartrate);
     }
 
