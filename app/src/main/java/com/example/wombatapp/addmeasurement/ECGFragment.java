@@ -94,6 +94,10 @@ public class ECGFragment extends MeasureFragment2 implements OnEcgResultListener
         } else {
             MonitorDataTransmissionManager.getInstance().stopMeasure();
         }
+
+        if(rrMax != 100000 && rrMin != 100000 && hr != 100000 && hrv != 100000 && mood != 100000){
+            Log.d("mylog", "The test has ended : \n rrMax = "+ rrMax+ "\n rrMin = " + rrMin+ "\n hr = " + hr+ "\n hrv = " + hrv+ "\n mood = "+ mood);
+        }
     }
 
     @Override
