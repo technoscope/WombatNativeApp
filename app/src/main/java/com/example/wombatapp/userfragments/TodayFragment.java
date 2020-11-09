@@ -127,10 +127,11 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
                         Cursor cursor = databaseHelper.getWeightData(s);
                         if (cursor != null) {
                             if (cursor.moveToLast()) {
+                                tvUpdateTimeWeightData.setText(cursor.getString(5));
+                                tvRemarksWeight.setText(cursor.getString(4));
                                 fatview.setText(cursor.getString(3));
                                 musclesview.setText(cursor.getString(2));
                                 weightview.setText(cursor.getString(1));
-                                tvUpdateTimeWeightData.setText(cursor.getString(5));
                             }
                         } else {
                             fatview.setText("0");
