@@ -465,7 +465,6 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
                             String.valueOf(round(scaleBtData.getFat(), 1)),
                             remarks,
                             currentDateAndTime);
-
                     datamodel.setFat(String.valueOf(round(scaleBtData.getFat(), 1)));
                     datamodel.setMuscle(String.valueOf(round(scaleBtData.getMuscle(), 1)));
                     datamodel.setWeight(String.valueOf(round(scaleBtData.getWeight(), 1)));
