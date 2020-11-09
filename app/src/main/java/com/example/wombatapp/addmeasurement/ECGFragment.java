@@ -38,12 +38,12 @@ public class ECGFragment extends MeasureFragment2 implements OnEcgResultListener
     private EcgTask mEcgTask;
     private WaveSurfaceView waveView;
     private ECGDrawWave ecgDrawWave;
-    private int rrMax;
-    private int rrMin;
-    private int hr;
-    private int hrv;
-    private int mood;
-    private int rr;
+    private int rrMax = -100000;
+    private int rrMin= -100000;
+    private int hr= -100000;
+    private int hrv= -100000;
+    private int mood= -100000;
+    private int rr= -100000;
 
 
     public ECGFragment() {
@@ -247,7 +247,7 @@ public class ECGFragment extends MeasureFragment2 implements OnEcgResultListener
                 break;
         }
 
-        if(rrMax != 0 && rrMin != 0 && hr != 0 && hrv != 0 && mood != 0 && rr != 0){
+        if(rrMax != 100000 && rrMin != 100000 && hr != 100000 && hrv != 100000 && mood != 100000){
             Log.d("mylog", "onECGValues: WE GOT ALL VALUES OOOHHHH YEAAHHHH BABY");
         }
     }
