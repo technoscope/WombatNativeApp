@@ -11,6 +11,7 @@ import android.content.IntentSender;
 import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,6 +29,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,7 @@ import com.example.wombatapp.bluetooth.BluetoothCommunication;
 import com.example.wombatapp.bluetooth.BluetoothSettingsFragment;
 import com.example.wombatapp.bluetooth.OpenScale;
 import com.example.wombatapp.dashboard.DashboardActivity;
+import com.example.wombatapp.dashboard.GridElementAdapter;
 import com.example.wombatapp.database.DatabaseHelper;
 import com.example.wombatapp.datatypes.ScaleMeasurement;
 import com.example.wombatapp.minttihealth.health.AlertDialogBuilder;
@@ -97,6 +100,7 @@ import com.linktop.whealthService.task.OxTask;
 import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -112,6 +116,8 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import lib.linktop.common.CssSubscriber;
@@ -131,6 +137,10 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, SharedPreferences.OnSharedPreferenceChangeListener, OnBleConnectListener, ServiceConnection,
         OnDeviceVersionListener, MonitorDataTransmissionManager.OnServiceBindListener, OnDeviceInfoListener {
+
+    private RecyclerView recyclerV; // saif added code
+    private ArrayList<String> userslist = new ArrayList<>();;
+
     public HcService mHcService;
     public static String USER_NAME;
     ViewPager viewPager;
@@ -139,7 +149,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
     SelectionPagerAdabter sectionsPagerAdapter;
     DatabaseHelper databaseHelper;
     private static final int REQUEST_OPEN_BT = 0x23;
-    TextView name;
+    // TextView name;
     ScaleDataModel scaleDataModel;
     BottomNavigationView bottomNavigationView;
     ScaleModel model = new ScaleModel();
@@ -264,16 +274,16 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         databaseHelper = new DatabaseHelper(this);
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
         prefs.registerOnSharedPreferenceChangeListener(this);
-        name = findViewById(R.id.id_name_mainactivity);
-        name.setText(getIntent().getStringExtra("username"));
+//        name = findViewById(R.id.id_name_mainactivity);
+//        name.setText(getIntent().getStringExtra("username"));
         USER_NAME = getIntent().getStringExtra("username");
         age = findViewById(R.id.id_age);
-        gender = findViewById(R.id.id_gender);
+      //  gender = findViewById(R.id.id_gender);
         model = ViewModelProviders.of(this).get(ScaleModel.class);
         datamodel = ViewModelProviders.of(this).get(Datamodel.class);
         model.setName(getIntent().getStringExtra("username"));
         bottomNavigationView = findViewById(R.id.navigation);
-        ImageView sigout = findViewById(R.id.id_edit_profile);
+        Button sigout = findViewById(R.id.id_edit_profile);
         sigout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -297,12 +307,38 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
             }
         });
 
+        setRecyclerV();
+
 
         if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.ACTIVITY_RECOGNITION)
                 != PackageManager.PERMISSION_GRANTED) {
 //             Permission is not granted
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 123);
         }
+    }
+
+    private void setRecyclerV(){
+        recyclerV = findViewById(R.id.recycleview);
+        try {
+            DatabaseHelper databaseHelper = new DatabaseHelper(this);
+            Cursor cursor = databaseHelper.getusers();
+            if (cursor != null) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        userslist.add(cursor.getString(0));
+                    }
+                    while (cursor.moveToNext());
+                }
+            }
+            assert cursor != null;
+            cursor.close();
+            cursor.close();
+
+        } catch (Exception ignored) {
+        }
+        GridElementAdapter adapter = new GridElementAdapter(this, userslist);
+        recyclerV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        recyclerV.setAdapter(adapter);
     }
 
     @Override
