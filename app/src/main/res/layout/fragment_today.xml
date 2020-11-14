@@ -31,38 +31,38 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <!--health score-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:background="@drawable/roundedcorner"
-            android:clickable="true"
-            android:elevation="5dp"
-            android:focusable="true"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <TextView
-                android:id="@+id/id_health_score"
-                android:layout_width="wrap_content"
+            <!--health score-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="120"
-                android:textAlignment="center"
-                android:textColor="@color/widgetTextColor"
-                android:textSize="32sp"
-                android:textStyle="bold" />
+                android:layout_margin="12dp"
+                android:background="@drawable/roundedcorner"
+                android:clickable="true"
+                android:elevation="5dp"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HEALTH SCORE"
-                android:textColor="@color/widgetTextColor"
-                android:layout_marginLeft="20dp"
-                android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/id_my_health_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="120"
+                    android:textAlignment="center"
+                    android:textColor="@color/widgetTextColor"
+                    android:textSize="32sp"
+                    android:textStyle="bold" />
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="HEALTH SCORE"
+                    android:textColor="@color/widgetTextColor"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
 
 
             <!--pulse rate-->
@@ -178,8 +178,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -246,8 +246,8 @@
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -273,8 +273,8 @@
                 android:clickable="true"
                 android:elevation="5dp"
                 android:focusable="true"
-                android:weightSum="6"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="6">
 
 
                 <LinearLayout
@@ -891,9 +891,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2.2"
-                    android:paddingLeft="40dp"
                     android:gravity="center_vertical"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:paddingLeft="40dp">
 
                     <TextView
                         android:id="@+id/id_meditation_score"
@@ -929,14 +929,14 @@
                         android:text="Last update:" />
 
                     <TextView
-                        android:id="@+id/steps_update_time"
+                        android:id="@+id/meditation_update_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Sep 2,9:00" />
 
                     <TextView
-                        android:id="@+id/btn_steps_measure"
+                        android:id="@+id/btn_meditation_measure"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -957,7 +957,7 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/id_score"
+                        android:id="@+id/id_meditation_remarks"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"

@@ -93,12 +93,11 @@ public class TodayFragment extends MeasureFragment implements OnSpO2ResultListen
         tvRemarksWeight = view.findViewById(R.id.tv_remarks_weight);
 
         Bundle bundle = this.getArguments();
-//        username = bundle.getString("username").trim();
-        username = "ahmad";
+        username = bundle.getString("username").trim();
+
         //mReference = FirebaseDatabase.getInstance().getReference(FirebaseAuth.getInstance().getCurrentUser().getUid());
         try {
-    //        Cursor cursor = databaseHelper.getWeightData(username);
-            Cursor cursor = null;
+            Cursor cursor = databaseHelper.getWeightData(username);
             if (cursor != null) {
                 if (cursor.moveToLast()) {
                     tvUpdateTimeWeightData.setText(cursor.getString(5));
