@@ -8,7 +8,7 @@ public class UserModalClass {
     private String birthDate;
     private String PersonalGoals;
     private int viewType;
-
+    private boolean isSelected = false;
 
     public UserModalClass(int iconId, String userName, int viewType) {
         this.iconId = iconId;
@@ -19,6 +19,14 @@ public class UserModalClass {
     public UserModalClass(int iconId, String userName) {
         this.iconId = iconId;
         this.userName = userName;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
     }
 
     public int getViewType() {

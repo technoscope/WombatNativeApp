@@ -42,6 +42,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         RelativeLayout rlUser;
         ImageView userIcon;
         TextView userName;
+        TextView userNameSelected;
         CircularProgressBar circularProgressBar1;
         CircularProgressBar circularProgressBar2;
         CircularProgressBar circularProgressBar3;
@@ -52,6 +53,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
             this.rlUser = itemView.findViewById(R.id.rl_user);
             this.userIcon = itemView.findViewById(R.id.gridimg);
             this.userName = itemView.findViewById(R.id.username);
+            this.userNameSelected = itemView.findViewById(R.id.username_selected);
             this.circularProgressBar1 = itemView.findViewById(R.id.circularProgressBar1);
             this.circularProgressBar2 = itemView.findViewById(R.id.circularProgressBar2);
             this.circularProgressBar3 = itemView.findViewById(R.id.circularProgressBar3);
@@ -70,7 +72,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
         }
     }
 
-    public MultiViewTypeAdapter(Context context, ArrayList<UserModalClass>data) {
+    public MultiViewTypeAdapter(Context context, ArrayList<UserModalClass> data) {
         this.dataSet = data;
         this.mContext = context;
         total_types = 3;
@@ -115,7 +117,15 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
 
                     break;
                 case 1:
+                    if (object.isSelected()) {
+                        ((UserTypeViewHolder) holder).userNameSelected.setVisibility(View.VISIBLE);
+                        ((UserTypeViewHolder) holder).userName.setVisibility(View.GONE);
+                    } else {
+                        ((UserTypeViewHolder) holder).userName.setVisibility(View.VISIBLE);
+                        ((UserTypeViewHolder) holder).userNameSelected.setVisibility(View.GONE);
+                    }
                     ((UserTypeViewHolder) holder).userName.setText(object.getUserName());
+                    ((UserTypeViewHolder) holder).userNameSelected.setText(object.getUserName());
                     ((UserTypeViewHolder) holder).rlUser.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -124,14 +134,18 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
 //                            intent.putExtra("username", elements.get(position));
 //                            context.startActivity(intent);
 
-                            int dummyProgress1 = (int) (Math.random() * (100 - 5 + 1) + 5+0f);
-                            ((UserTypeViewHolder) holder).circularProgressBar1.setProgressWithAnimation(dummyProgress1, Long.valueOf(2000));
+                            for (int i = 0; i < dataSet.size(); i++) {
+                                if (dataSet.get(i).getUserName() != null) {
+                                    if (dataSet.get(i).getUserName().equals(object.getUserName())) {
+                                        dataSet.get(i).setSelected(true);
+                                    } else {
+                                        dataSet.get(i).setSelected(false);
+                                    }
+                                }
+                            }
 
-                            int dummyProgress2 = (int) (Math.random() * (100 - 5 + 1) + 5+0f);
-                            ((UserTypeViewHolder) holder).circularProgressBar2.setProgressWithAnimation(dummyProgress2, Long.valueOf(2000));
+                            notifyDataSetChanged();
 
-                            int dummyProgress3 = (int) (Math.random() * (100 - 5 + 1) + 5+0f);
-                            ((UserTypeViewHolder) holder).circularProgressBar3.setProgressWithAnimation(dummyProgress3, Long.valueOf(2000));
                         }
                     });
 
@@ -139,9 +153,14 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
                         Glide.with(mContext).load(mContext.getDrawable(object.getIconId())).into(((UserTypeViewHolder) holder).userIcon);
                     }
 
-                    ((UserTypeViewHolder) holder).circularProgressBar1.setProgress(30f);
-                    ((UserTypeViewHolder) holder).circularProgressBar2.setProgress(50f);
-                    ((UserTypeViewHolder) holder).circularProgressBar3.setProgress(84f);
+                    int dummyProgress1 = (int) (Math.random() * (100 - 5 + 1) + 5 + 0f);
+                    ((UserTypeViewHolder) holder).circularProgressBar1.setProgressWithAnimation(dummyProgress1, Long.valueOf(2000));
+
+                    int dummyProgress2 = (int) (Math.random() * (100 - 5 + 1) + 5 + 0f);
+                    ((UserTypeViewHolder) holder).circularProgressBar2.setProgressWithAnimation(dummyProgress2, Long.valueOf(2000));
+
+                    int dummyProgress3 = (int) (Math.random() * (100 - 5 + 1) + 5 + 0f);
+                    ((UserTypeViewHolder) holder).circularProgressBar3.setProgressWithAnimation(dummyProgress3, Long.valueOf(2000));
 
                     break;
                 case 2:

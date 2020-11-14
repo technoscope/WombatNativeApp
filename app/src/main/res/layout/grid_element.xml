@@ -65,19 +65,42 @@
 
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/circularProgressBar3"
-        android:layout_gravity="center"
-        android:fontFamily="@font/varela_round"
-        android:gravity="center"
-        android:text="user name"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:layout_alignBottom="@+id/circularProgressBar3">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/varela_round"
+            android:gravity="center"
+            android:text="user name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/username_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/varela_round"
+            android:gravity="center"
+            android:text="user name"
+            android:paddingHorizontal="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/bg_white_curved"/>
+
+    </RelativeLayout>
 
 
 </LinearLayout>
