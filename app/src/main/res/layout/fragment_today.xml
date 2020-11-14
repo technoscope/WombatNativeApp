@@ -24,8 +24,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/fragmentframe">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -41,14 +40,14 @@
                 android:elevation="5dp"
                 android:focusable="true"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:weightSum="6">
 
 
                 <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
@@ -62,10 +61,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -81,7 +80,7 @@
                             android:text="@{String.format(@string/hr_value, model.hr)}"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -90,7 +89,7 @@
                             android:layout_gravity="bottom"
                             android:text=" bpm"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="24sp" />
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <TextView
@@ -98,14 +97,14 @@
                         android:layout_height="wrap_content"
                         android:text="Pulse"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="26sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -121,7 +120,7 @@
                             android:text="139"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -130,7 +129,7 @@
                             android:layout_gravity="bottom"
                             android:text=" bpm"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="24sp" />
+                            android:textSize="18sp" />
                     </LinearLayout>
 
                     <TextView
@@ -139,14 +138,14 @@
                         android:text="Max Pulse"
                         android:textColor="@color/widgetTextColor"
 
-                        android:textSize="26sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -162,7 +161,7 @@
                             android:text="98"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -173,15 +172,14 @@
                         android:layout_gravity="center"
                         android:text="HRV"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <TextView
@@ -212,10 +210,10 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <TextView
@@ -226,7 +224,7 @@
                         android:text="Good"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="36sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -271,13 +269,13 @@
 
                     <TextView
                         android:id="@+id/id_sleep"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="9 hr"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="42sp"
+                        android:textSize="32sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -285,14 +283,14 @@
                         android:layout_height="wrap_content"
                         android:text="Sleep"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -308,7 +306,7 @@
                             android:text="4h 10"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -326,14 +324,14 @@
                         android:text="Deep Sleep"
                         android:textColor="@color/widgetTextColor"
 
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -344,7 +342,7 @@
                         android:text="112"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="42sp"
+                        android:textSize="32sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -353,7 +351,7 @@
                         android:layout_gravity="center"
                         android:text="Rest Score"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp"
+                        android:textSize="18sp"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
 
@@ -361,7 +359,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
@@ -396,7 +394,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -407,7 +405,7 @@
                         android:text="Good"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="36sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -453,7 +451,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -469,7 +467,7 @@
                             android:text="35.5"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -487,14 +485,14 @@
                         android:layout_height="wrap_content"
                         android:text="Weight"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="28sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -505,7 +503,7 @@
                         android:text="13.8"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="42sp"
+                        android:textSize="32sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -514,14 +512,14 @@
                         android:layout_gravity="center"
                         android:text="Muscle Mass"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -537,7 +535,7 @@
                             android:text="20"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -557,14 +555,14 @@
                         android:text=" Fat"
                         android:textColor="@color/widgetTextColor"
 
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
+                    android:layout_marginStart="40dp"
                     android:layout_marginTop="20dp"
                     android:orientation="vertical">
 
@@ -599,7 +597,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -610,7 +608,7 @@
                         android:text="Normal"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="36sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -649,7 +647,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -665,7 +663,7 @@
                             android:text="3500"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -675,14 +673,14 @@
                         android:layout_height="wrap_content"
                         android:text="Steps"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -693,7 +691,7 @@
                         android:text="1300"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="42sp"
+                        android:textSize="32sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -702,14 +700,14 @@
                         android:layout_gravity="center"
                         android:text="Calories"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -725,7 +723,7 @@
                             android:text="14"
                             android:textAlignment="center"
                             android:textColor="@color/widgetTextColor"
-                            android:textSize="42sp"
+                            android:textSize="32sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -736,14 +734,14 @@
                         android:text=" Floors"
                         android:textColor="@color/widgetTextColor"
 
-                        android:textSize="24sp" />
+                        android:textSize="18sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="26dp"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
                     <TextView
@@ -754,7 +752,7 @@
                         android:text="Normal"
                         android:textAlignment="center"
                         android:textColor="@color/widgetTextColor"
-                        android:textSize="36sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>

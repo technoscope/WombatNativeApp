@@ -12,7 +12,6 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,13 +23,13 @@ import android.text.Html;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,7 +38,7 @@ import com.example.wombatapp.bluetooth.BluetoothCommunication;
 import com.example.wombatapp.bluetooth.BluetoothSettingsFragment;
 import com.example.wombatapp.bluetooth.OpenScale;
 import com.example.wombatapp.dashboard.DashboardActivity;
-import com.example.wombatapp.dashboard.GridElementAdapter;
+import com.example.wombatapp.dashboard.MultiViewTypeAdapter;
 import com.example.wombatapp.database.DatabaseHelper;
 import com.example.wombatapp.datatypes.ScaleMeasurement;
 import com.example.wombatapp.minttihealth.health.AlertDialogBuilder;
@@ -48,6 +47,7 @@ import com.example.wombatapp.minttihealth.health.BleDeviceListDialogFragment;
 import com.example.wombatapp.minttihealth.health.HcService;
 import com.example.wombatapp.minttihealth.health.PermissionManager;
 import com.example.wombatapp.minttihealth.health.adapter.BindDevListAdapter;
+import com.example.wombatapp.model.UserModalClass;
 import com.example.wombatapp.model.StepModel;
 import com.example.wombatapp.support.SupportActivity;
 import com.example.wombatapp.userfragments.AllTimeFragment;
@@ -83,7 +83,6 @@ import com.google.android.gms.fitness.result.DataReadResult;
 import com.google.android.gms.fitness.result.ListSubscriptionsResult;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -115,6 +114,8 @@ import androidx.core.content.ContextCompat;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -139,12 +140,12 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         OnDeviceVersionListener, MonitorDataTransmissionManager.OnServiceBindListener, OnDeviceInfoListener {
 
     private RecyclerView recyclerV; // saif added code
-    private ArrayList<String> userslist = new ArrayList<>();;
+    private ArrayList<UserModalClass> userslist = new ArrayList<>();;
 
     public HcService mHcService;
     public static String USER_NAME;
     ViewPager viewPager;
-    TabLayout tabs;
+   // TabLayout tabs;
     private SharedPreferences prefs;
     SelectionPagerAdabter sectionsPagerAdapter;
     DatabaseHelper databaseHelper;
@@ -254,7 +255,7 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_back_btn);
         measurementbtn = findViewById(R.id.id_measurement_activityy);
         measurementbtn.setOnClickListener(new View.OnClickListener() {
@@ -283,13 +284,13 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         datamodel = ViewModelProviders.of(this).get(Datamodel.class);
         model.setName(getIntent().getStringExtra("username"));
         bottomNavigationView = findViewById(R.id.navigation);
-        Button sigout = findViewById(R.id.id_edit_profile);
-        sigout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mApiClient.clearDefaultAccountAndReconnect();
-            }
-        });
+//        Button sigout = findViewById(R.id.id_edit_profile);
+//        sigout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                mApiClient.clearDefaultAccountAndReconnect();
+//            }
+//        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -319,13 +320,14 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
 
     private void setRecyclerV(){
         recyclerV = findViewById(R.id.recycleview);
+        userslist.add(new UserModalClass(0,null,0));
         try {
             DatabaseHelper databaseHelper = new DatabaseHelper(this);
             Cursor cursor = databaseHelper.getusers();
             if (cursor != null) {
                 if (cursor.moveToFirst()) {
                     do {
-                        userslist.add(cursor.getString(0));
+                        userslist.add(new UserModalClass(R.drawable.avatar,cursor.getString(0),1));
                     }
                     while (cursor.moveToNext());
                 }
@@ -336,9 +338,20 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
 
         } catch (Exception ignored) {
         }
-        GridElementAdapter adapter = new GridElementAdapter(this, userslist);
+
+        userslist.add(new UserModalClass(R.drawable.icon_hyena,"Saif",1));
+        userslist.add(new UserModalClass(R.drawable.icon_bear,"Ahmad",1));
+        userslist.add(new UserModalClass(R.drawable.icon_frog,"Faiq Achakzai",1));
+        userslist.add(new UserModalClass(R.drawable.icon_tarsier,"Annas Waheed",1));
+        userslist.add(new UserModalClass(R.drawable.icon_bee,"Ashir",1));
+        
+        userslist.add(new UserModalClass(0,null,2));
+
+        MultiViewTypeAdapter adapter = new MultiViewTypeAdapter(this, userslist);
         recyclerV.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recyclerV.setAdapter(adapter);
+
+
     }
 
     @Override
@@ -358,11 +371,14 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         sectionsPagerAdapter.addFragment(todayFragment, "Today");
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
-        tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
+        viewPager.setCurrentItem(4);
+
+
+//        tabs = findViewById(R.id.tabs);
+//        tabs.setupWithViewPager(viewPager);
         //  tabs.setTabTextColors(ColorStateList.valueOf(R.color.colorAccent));
-        tabs.setTabTextColors(getResources().getColor(R.color.white), getResources().getColor(R.color.black));
-        tabs.setSelectedTabIndicatorColor(Color.parseColor("#FF0000"));
+//        tabs.setTabTextColors(getResources().getColor(R.color.white), getResources().getColor(R.color.black));
+//        tabs.setSelectedTabIndicatorColor(Color.parseColor("#FF0000"));
 
 
 //        GoogleSignInAccount googleSignInAccount = GoogleSignIn.getLastSignedInAccount(this);
@@ -1254,10 +1270,14 @@ public class MainActivity extends AppCompatActivity implements OnDataPointListen
         App.isShowUploadButton.set(false);
         super.onDestroy();
     }
+
 //    public class ViewTodaysStepCountTask extends AsyncTask<Void, Void, Void> {
 //        protected Void doInBackground(Void... params) {
 //            displayStepDataForToday();
 //            return null;
 //        }
 //    }
+
+
+
 }

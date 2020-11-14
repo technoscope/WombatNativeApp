@@ -6,4 +6,8 @@
     <color name="white">#ffffff</color>
     <color name="lightpink">#FDF1F2</color>
     <color name="widgetTextColor">#555</color>
+
+    <color name="gree_app_color">#79DBA2</color>
+    <color name="light_blue_app_color">#6ABAE5</color>
+    <color name="dark_blue_app_color">#95B3C2</color>
 </resources>
