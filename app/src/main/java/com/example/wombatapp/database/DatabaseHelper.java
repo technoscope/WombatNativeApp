@@ -20,7 +20,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String HEIGHT = "height";
     private static final String BIRTHDATE = "birthdate";
     private static final String PERSONAL_GOALS = "personal_goals";
-    private static final String USER_ICON_ID = "personal_goals";
+    private static final String USER_ICON_ID = "user_icon_id";
 
 
     private static final String HEART_TABLE_NAME = "heartTable";
