@@ -123,7 +123,8 @@
                 android:gravity="center"
                 android:paddingHorizontal="10dp"
                 android:text="+ Measurement"
-                android:textColor="#FD9052"
+                android:textStyle="bold"
+                android:textColor="#ec737a"
                 android:textSize="20dp" />
         </LinearLayout>
 
