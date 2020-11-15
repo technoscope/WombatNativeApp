@@ -28,11 +28,13 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
     public static class FamilyTypeViewHolder extends RecyclerView.ViewHolder {
 
         LinearLayout lyFamily;
+        TextView textViewSelected;
 
         public FamilyTypeViewHolder(View itemView) {
             super(itemView);
 
             this.lyFamily = itemView.findViewById(R.id.ly_family);
+            this.textViewSelected = itemView.findViewById(R.id.username_selected);
 
         }
     }
@@ -111,6 +113,7 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
                     ((FamilyTypeViewHolder) holder).lyFamily.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
+                            ((FamilyTypeViewHolder) holder).textViewSelected.setVisibility(View.VISIBLE);
                             // todo click listener for family
                         }
                     });
@@ -133,7 +136,6 @@ public class MultiViewTypeAdapter extends RecyclerView.Adapter {
 //                            Intent intent = new Intent(mContext, MainActivity.class);
 //                            intent.putExtra("username", elements.get(position));
 //                            context.startActivity(intent);
-
                             for (int i = 0; i < dataSet.size(); i++) {
                                 if (dataSet.get(i).getUserName() != null) {
                                     if (dataSet.get(i).getUserName().equals(object.getUserName())) {
